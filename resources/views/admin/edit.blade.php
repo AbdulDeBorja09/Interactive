@@ -12,6 +12,7 @@
                 <div class="col-lg-5">
                     <h1>Office Name:</h1>
                 </div>
+              
                 <div class="col-lg-7"><input class="w-100" type="text" name="name" value="{{$item->room_name}}">
                 </div>
                 <div class="col-lg-5">
