@@ -153,3 +153,26 @@ body {
     height: 70vh;
     padding: 30px 50px;
 }
+.edit-container h1 {
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin-top: 20px;
+}
+.edit-container input,
+.edit-container textarea {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 5px;
+    background-color: #d9d9d9;
+    border: 1px solid #d9d9d9;
+}
+.edit-container button {
+    background-color: #10b6d7;
+    border: 1px solid black;
+    color: white;
+    padding: 5px;
+    font-weight: 600px;
+    border-radius: 50px;
+    margin-top: 30px;
+}
