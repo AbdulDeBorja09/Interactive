@@ -16,3 +16,4 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 
 Route::get('/Admin/Dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+Route::get('/Admin/Edit', [AdminController::class, 'edit'])->name('edit');

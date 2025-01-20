@@ -101,6 +101,12 @@ body {
     background-color: rgb(224, 224, 224);
     color: black;
 }
+.main {
+    margin-top: 100px;
+}
+.content-div {
+    padding-bottom: 50px;
+}
 .content {
     background-color: white;
     border: 1px solid black;
@@ -108,9 +114,11 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    margin: 20px;
 }
-.content h1 {
+.content h2 {
     font-size: 25px;
+    margin-top: 5px;
 }
 .content a {
     background-color: #10b6d7;
@@ -118,7 +126,30 @@ body {
     border-radius: 10px;
     width: 7%;
     text-align: center;
-    padding-top: 5px;
+    padding-top: 8px;
     font-weight: 700;
     color: white;
+    font-size: 16px;
+}
+.header {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.header h1 {
+    font-size: 40px;
+    width: 35vw;
+    color: #10b6d7;
+    background-color: white;
+    border-radius: 10px;
+    padding: 7px 15px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.edit-container {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 70vh;
+    padding: 30px 50px;
 }
