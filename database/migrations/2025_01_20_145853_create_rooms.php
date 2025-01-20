@@ -11,16 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('svgs', function (Blueprint $table) {
-            $table->id();
-            $table->longText('content');
-            $table->timestamps();
-        });
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('x');
-            $table->integer('y');
+            $table->string('floor');
+            $table->string('room_id');
+            $table->string('text_id');
+            $table->string('room_name')->nullable();
+            $table->string('room_desc')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('rooms');
     }
 };

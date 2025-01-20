@@ -3,16 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Rooms;
 
 class AdminController extends Controller
 {
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $rooms = Rooms::all();
+        return view('admin.dashboard', compact('rooms'));
     }
 
-    public function edit()
+    public function edit($id)
     {
-        return view('admin.edit');
+        $item = Rooms::find($id);
+        return view('admin.edit', compact('item'));
     }
 }
