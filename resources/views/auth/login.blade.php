@@ -76,7 +76,7 @@
 
 
 
-@extends('admin.app')
+@extends('admin.layout.app')
 
 @section('content')
 <section class="login-container">

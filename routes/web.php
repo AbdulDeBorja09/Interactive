@@ -17,4 +17,6 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::middleware(['auth'])->group(function () {
     Route::get('/Admin/Dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/Admin/Edit/{id}', [AdminController::class, 'edit'])->name('edit');
+
+    Route::post('/Admin/Edit/Submit', [AdminController::class, 'submitedit'])->name('submitedit');
 });

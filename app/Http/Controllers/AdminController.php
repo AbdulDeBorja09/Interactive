@@ -18,4 +18,22 @@ class AdminController extends Controller
         $item = Rooms::find($id);
         return view('admin.edit', compact('item'));
     }
+
+    public function submitedit(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'desc' => 'required|string|max:255',
+        ]);
+
+        $update = Rooms::where('id', $request->id)->update([
+            'room_name' => $request->name,
+            'room_desc' => $request->desc,
+        ]);
+
+
+        if ($update) {
+            return redirect()->route('dashboard');
+        }
+    }
 }

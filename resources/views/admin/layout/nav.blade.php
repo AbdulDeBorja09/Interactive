@@ -6,7 +6,7 @@
         </button>
 
 
-
+        @auth
         <ul class="n" style="margin-right: 50px">
             <li class="logout nav-item dropdown" style="list-style: none">
                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -25,6 +25,7 @@
                 </div>
             </li>
         </ul>
+        @endauth
 
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel">
