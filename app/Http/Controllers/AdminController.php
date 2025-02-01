@@ -9,9 +9,45 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        $rooms = Rooms::all();
-        return view('admin.dashboard', compact('rooms'));
+        return $this->showFloor('All Floors');
     }
+
+    public function lowerGround()
+    {
+        return $this->showFloor('Lower Ground');
+    }
+
+    public function groundFloor()
+    {
+        return $this->showFloor('Ground Floor');
+    }
+
+    public function secondFloor()
+    {
+        return $this->showFloor('Second Floor');
+    }
+
+    public function thirdFloor()
+    {
+        return $this->showFloor('Third Floor');
+    }
+
+    public function fourthFloor()
+    {
+        return $this->showFloor('Fourth Floor');
+    }
+
+    private function showFloor($floor)
+    {
+        if ($floor === 'All Floors') {
+            $rooms = Rooms::all();
+        } else {
+            $rooms = Rooms::where('floor', $floor)->get();
+        }
+
+        return view('admin.main', compact('rooms', 'floor'));
+    }
+
 
     public function edit($id)
     {

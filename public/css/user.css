@@ -48,6 +48,7 @@ nav img {
     border: 1px solid black;
     padding-top: 2px;
     background-color: white;
+    list-style: none;
 }
 .floors ul li a {
     background-color: white;
@@ -60,12 +61,13 @@ nav img {
     color: white;
     background-color: #00b4d8;
 }
+
 .bottom-sheet {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 90px;
+    height: 140px;
     background-color: #00b4d8;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
     border-top-left-radius: 10px;

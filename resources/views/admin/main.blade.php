@@ -4,7 +4,7 @@
 
 <div class="main">
     <div class="header">
-        <h1>Lower Ground Floor Offices</h1>
+        <h1>{{$floor}} Offices</h1>
     </div>
     <div class="content-div">
         @foreach ($rooms as $item)

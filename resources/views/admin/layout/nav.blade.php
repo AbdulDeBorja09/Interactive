@@ -44,20 +44,36 @@
                 </form>
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 text-center">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Lower Ground Floor</a>
+                        <a class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"
+                            href="{{route('dashboard')}}">
+                            All Rooms</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Ground Floor</a>
+                        <a class="nav-link {{ request()->routeIs('lower-ground') ? 'active' : '' }}"
+                            href="{{route('lower-ground')}}">Lower
+                            Ground Floor</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Second Floor</a>
+                        <a class="nav-link {{ request()->routeIs('ground-floor') ? 'active' : '' }}"
+                            href="{{route('ground-floor')}}">Ground
+                            Floor</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Third Floor</a>
+                        <a class="nav-link {{ request()->routeIs('second-floor') ? 'active' : '' }}"
+                            href="{{route('second-floor')}}">Second
+                            Floor</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Fourth Floor</a>
+                        <a class="nav-link {{ request()->routeIs('third-floor') ? 'active' : '' }}"
+                            href="{{route('third-floor')}}">Third
+                            Floor</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->routeIs('fourth-floor') ? 'active' : '' }}"
+                            href="{{route('fourth-floor')}}">Fourth
+                            Floor</a>
+                    </li>
+
                 </ul>
             </div>
         </div>

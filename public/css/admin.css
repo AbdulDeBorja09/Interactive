@@ -146,6 +146,25 @@ body {
     font-weight: 700;
     letter-spacing: 3px;
 }
+.edit-return {
+    margin-bottom: 10px;
+}
+.edit-return svg {
+    margin-top: -5px;
+}
+.edit-return a {
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+.back-button b {
+    color: black;
+    font-size: 20px;
+}
+.edit-return a:hover,
+.edit-return a:hover b {
+    color: rgb(71, 71, 71);
+}
 .edit-container {
     background-color: white;
     border-radius: 10px;
@@ -166,6 +185,9 @@ body {
     padding: 5px;
     background-color: #d9d9d9;
     border: 1px solid #d9d9d9;
+}
+.edit-container textarea {
+    min-height: 17vw;
 }
 .edit-container button {
     background-color: #10b6d7;

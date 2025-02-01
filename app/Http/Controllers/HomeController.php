@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Rooms;
 
 class HomeController extends Controller
 {
@@ -27,6 +28,10 @@ class HomeController extends Controller
     }
     public function map()
     {
-        return view('map');
+        $data = Rooms::all();
+        return view('map', compact('data'));
     }
+
+
+    
 }
