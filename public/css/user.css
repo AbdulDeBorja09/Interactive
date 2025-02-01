@@ -37,7 +37,7 @@ nav img {
 }
 .floors {
     position: fixed;
-    bottom: 15%;
+    bottom: 17%;
 }
 .floors ul li {
     width: 30px;
@@ -195,4 +195,20 @@ svg {
 }
 .room:hover {
     fill: #00b4d8;
+}
+/* Animated path */
+.directions {
+    stroke-dasharray: 1000; /* Adjust based on path length */
+    stroke-dashoffset: 1000; /* Same value as stroke-dasharray */
+    animation: draw 10s linear infinite;
+    animation-delay: 0.5s; /* Slight delay to simulate a quicker reset */
+}
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 1000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
 }

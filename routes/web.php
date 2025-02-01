@@ -22,6 +22,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/Third-floor', [AdminController::class, 'thirdFloor'])->name('third-floor');
     Route::get('/Fourth-floor', [AdminController::class, 'fourthFloor'])->name('fourth-floor');
 
-
     Route::post('/Admin/Edit/Submit', [AdminController::class, 'submitedit'])->name('submitedit');
 });
