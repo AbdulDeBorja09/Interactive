@@ -7,6 +7,11 @@ use App\Models\Rooms;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function dashboard()
     {
         return $this->showFloor('All Floors');
@@ -62,14 +67,14 @@ class AdminController extends Controller
             'desc' => 'required|string|max:255',
         ]);
 
-        $update = Rooms::where('id', $request->id)->update([
-            'room_name' => $request->name,
-            'room_desc' => $request->desc,
-        ]);
-
-
-        if ($update) {
-            return redirect()->route('dashboard');
+        try {
+            Rooms::where('id', $request->id)->update([
+                'room_name' => $request->name,
+                'room_desc' => $request->desc,
+            ]);
+            return redirect()->back()->with('success', 'Room updated successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Failed to update room');
         }
     }
 }

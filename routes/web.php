@@ -8,8 +8,7 @@ use App\Http\Controllers\AdminController;
 Auth::routes();
 Route::get('/', [HomeController::class, 'map'])->name('map');
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomeController::class, 'ajaxSearch'])->name('search.ajax');
+Route::get('/get-room-info/{id}' , [HomeController::class, 'showinfo'])->name('showinfo');
 
 
 Route::middleware(['auth'])->group(function () {

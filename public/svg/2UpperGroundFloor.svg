@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
+    display="none"
    width="94.1822624206543mm"
    height="90.46990203857422mm"
    viewBox="0 0 94.1822624206543 90.46990203857422"
    version="1.1"
-    id="GF" 
+   id="GF" 
    class="floor-svg" 
-   style="display: none;"
+   data-name="room-gf"
    sodipodi:docname="2UpperGroundFloor.svg"
    xml:space="preserve"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
@@ -14,7 +15,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   xmlns:svg="http://www.w3.org/2000/svg">
+   <defs
      id="defs127"><inkscape:path-effect
        effect="bspline"
        id="path-effect128"
@@ -36,9 +38,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="3.7492671"
-     inkscape:cx="165.49901"
-     inkscape:cy="221.77668"
+     inkscape:zoom="1.8746336"
+     inkscape:cx="121.35705"
+     inkscape:cy="172.03362"
      inkscape:window-width="1600"
      inkscape:window-height="837"
      inkscape:window-x="-8"
@@ -118,7 +120,9 @@
        stroke-width="0"
        opacity="1"
        d="M 29.518062608200456,67.91655731220867 L 29.51806276584997,67.91655748798978 L 33.7744482196353,72.21398908098347 L 33.77444839467313,72.21398924094689 L 33.774448567758306,72.21398907887266 L 36.75473387097779,69.13107317217238 L 36.75473402362393,69.13107299814682 L 36.75473386877228,69.13107282608075 L 32.60369508701302,64.9451829729722 L 32.603694915588825,64.94518281614772 L 32.60369474059674,64.94518296898117 L 29.51806276996446,67.9165571402064 L 29.518062608200456,67.91655731220867 z"
-       id="path8" /></g><g
+       id="stair-gf-b"
+       data-name="stair-b"
+      class="stairs" /></g><g
      id="g9"><path
        fill-rule="evenodd"
        fill="#da9849"
@@ -126,7 +130,9 @@
        stroke-width="0"
        opacity="1"
        d="M 57.397560136125335,69.15582275382077 L 57.39756029581921,69.15582292678019 L 60.44422513707286,72.14514143063509 L 60.44422531120037,72.14514158555654 L 60.44422548379145,72.14514142892544 L 64.65380841876305,67.9325105510902 L 64.65380857712428,67.93251037609276 L 64.65380841633248,67.93251020332589 L 61.59259432123193,64.95354478651407 L 61.59259414684367,64.95354463260676 L 61.59259397470207,64.95354478902273 L 57.397560294018135,69.15582257921588 L 57.397560136125335,69.15582275382077 z"
-       id="path9" /></g><g
+        id="stair-gf-c"
+       data-name="stair-c"
+      class="stairs"/></g><g
      id="g10"><path
        fill-rule="evenodd"
        fill="#da9849"
@@ -134,7 +140,9 @@
        stroke-width="0"
        opacity="1"
        d="M 1.1350766584136099e-08,33.888595592286705 L 0.0,33.8885958248967 L 0.0,38.26427435168174 L 1.1495240155739438e-08,38.26427458567273 L 2.4548620353309104e-07,38.26427459716797 L 6.231460325802859,38.26427459716797 L 6.231460559793823,38.26427458567273 L 6.2314605712890625,38.26427435168175 L 6.2314605712890625,33.8230593291617 L 6.231460559648683,33.8230590937947 L 6.231460324172286,33.82305908463019 L 2.438284934739494e-07,33.88859557849033 L 1.1350766584136099e-08,33.888595592286705 z"
-       id="path10" /></g><g
+        id="stair-gf-a"
+       data-name="stair-a"
+      class="stairs" /></g><g
      id="g11"><path
        fill-rule="evenodd"
        fill="#da9849"
@@ -142,7 +150,9 @@
        stroke-width="0"
        opacity="1"
        d="M 87.98537446221552,33.821693431901686 L 87.98537445121816,33.821693666028075 L 87.99508666938834,38.28420614523551 L 87.99508668136224,38.28420637891558 L 87.99508691506777,38.28420639038086 L 94.15159582384975,38.28420639038086 L 94.15159605784069,38.28420637888562 L 94.15159606933594,38.284206144894696 L 94.15159606933594,33.81348443758876 L 94.15159605782236,33.81348420342344 L 94.15159582364178,33.81348419222163 L 87.98537469630168,33.82169342008316 L 87.98537446221552,33.821693431901686 z"
-       id="path11" /></g><g
+        id="stair-gf-d"
+        data-name="stair-d"
+      class="stairs" /></g><g
      id="g12"><path
        fill-rule="evenodd"
        fill="#000000"
@@ -213,8 +223,10 @@
        stroke-width="0"
        opacity="1"
        d="M 19.476860062606796,78.89648437498275 L 19.476860219893993,78.89648454836889 L 27.67454511453482,87.08763105217324 L 27.67454528808702,87.08763120935491 L 27.674545461660333,87.08763105219639 L 33.98633557985643,80.78256243021161 L 33.98633573792189,80.7825622559147 L 33.98633557868918,80.78256208268324 L 25.71824854153362,72.63349168782942 L 25.71824836738185,72.63349153221806 L 25.718248194634114,72.63349168938646 L 19.47686021952486,78.89648420126254 L 19.476860062606796,78.89648437498275 z"
-       id="path20" /></g><g
-     id="g21"><path
+       id="room-gf01" 
+       class="room"
+         onclick="showRoomInfo(this.id)"/></g><g
+        id="g21"><path
        fill-rule="evenodd"
        fill="#2a4023"
        stroke="#555555"
@@ -269,7 +281,9 @@
        stroke-width="0"
        opacity="1"
        d="M 2.4465866251960215,27.47668457029855 L 2.446586782995721,27.476684743793523 L 8.755397622854511,33.762740915717615 L 8.755397796610485,33.76274107264086 L 8.755397969971625,33.76274091528177 L 33.96390240153618,8.518656806704975 L 33.96390312962218,8.518656145992123 L 33.96390391907084,8.518655559970366 L 33.963904762250955,8.518655054304482 L 33.96390565101191,8.518654633882495 L 33.963906576762504,8.518654302768418 L 33.96390753055395,8.518654064162966 L 33.96390850316643,8.518653920372621 L 33.963909485198165,8.518653872787336 L 38.23011755205891,8.52190017681492 L 38.230117786315475,8.521900165470928 L 38.23011779755676,8.521899931209422 L 38.220024109181445,0.10636926427855885 L 38.220024097384375,0.10636903010219777 L 38.22002386316369,0.10636901922302677 L 31.54122567272021,0.12453460628253239 L 31.541225437911436,0.12453461817048467 L 31.54122526126289,0.12453477332129051 L 28.54720829819626,3.019398459918887 L 28.5472075633173,3.0193991040446453 L 28.54720676907757,3.0193996733673325 L 28.54720592306161,3.0194001624502302 L 28.547205033348423,3.0194005666228643 L 28.547204108434272,3.019400882025609 L 28.547203157151582,3.019401105646541 L 28.54720218858458,3.019401235350203 L 28.54720121198255,3.019401269897997 L 28.5472002366715,3.0194012089600095 L 28.547199271965123,3.0194010531181656 L 28.54719832707583,3.0194008038606692 L 28.547197411026794,3.0194004635677922 L 28.54719653256578,3.019400035489145 L 28.547195700081616,3.019399523712643 L 28.547194921524056,3.0193989331254714 L 28.54719420432791,3.0193982693674126 L 27.736316853818987,2.19180315499129 L 27.736316680823045,2.1918029950531612 L 27.736316506189123,2.1918031532012097 L 2.446586782698687,27.476684396533855 L 2.4465866251960215,27.47668457029855 z"
-       id="path27" /></g><g
+       id="room-gf05" 
+       class="room"
+         onclick="showRoomInfo(this.id)"/></g><g
      id="g28"><path
        fill-rule="evenodd"
        fill="#000000"
@@ -341,7 +355,9 @@
        stroke-width="0"
        opacity="1"
        d="M 60.13013459463609,8.579044337062307 L 60.13013475832463,8.57904451729582 L 85.42681104478623,33.796539133708144 L 85.4268112182642,33.79653929047872 L 85.42681139179062,33.79653913376164 L 91.7747800984881,27.472345526467024 L 91.77478025692012,27.47234535221935 L 91.77478009750956,27.472345178866174 L 66.11363237777866,2.193538838784884 L 66.11363220232701,2.1935386822133434 L 66.1136320303173,2.1935388425586724 L 65.35156197820672,2.9775889703560887 L 65.3515612511642,2.97758964755022 L 65.35156046050935,2.9775902492541575 L 65.35155961404737,2.977590769527985 L 65.35155872013442,2.97759120323565 L 65.35155778759503,2.977591546095665 L 65.35155682563506,2.9775917947233754 L 65.35155584375082,2.977591946664371 L 65.3515548516353,2.977592000418717 L 65.35155385908251,2.9775919554557597 L 65.35155287589075,2.9775918122193654 L 65.3515519117659,2.9775915721235395 L 65.35155097622565,2.977591237538466 L 65.3515500785055,2.977590811767111 L 65.35154922746759,2.977590299012616 L 65.35154843151318,2.977589704336805 L 65.35154769849984,2.977589033610214 L 62.405685598635365,1.7570282036573988e-07 L 62.40568541980565,1.1977916659474269e-08 L 62.405685177643676,0.0 L 60.19216180441446,0.0 L 60.19216157137234,1.1395846380796596e-08 L 60.192161558291936,2.4434940159212435e-07 L 60.13013458431425,8.579044093810511 L 60.13013459463609,8.579044337062307 z"
-       id="path36" /></g><g
+        id="room-gf09" 
+       class="room"
+         onclick="showRoomInfo(this.id)" /></g><g
      id="g37"><path
        fill-rule="evenodd"
        fill="#000000"
@@ -373,7 +389,9 @@
        stroke-width="0"
        opacity="1"
        d="M 76.95048524576636,64.01850891112586 L 76.950485403276,64.01850908465843 L 83.2769163304308,70.33554059826666 L 83.27691650391166,70.33554075528706 L 83.27691667749765,70.33554059838266 L 91.74472028518925,61.89162462398845 L 91.74472044273635,61.89162445065809 L 91.74472028573413,61.89162427683388 L 85.42104356948386,55.546066458267745 L 85.42104339598292,55.54606630048722 L 85.42104322222721,55.54606645798723 L 76.95048540312766,64.01850873745872 L 76.95048524576636,64.01850891112586 z"
-       id="path40" /><text
+        id="room-gf12a" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"/><text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:1;paint-order:stroke markers fill"
        x="11.575302"
@@ -392,7 +410,9 @@
        stroke-width="0"
        opacity="1"
        d="M 2.461875931858474,61.866874694853216 L 2.4618760893351057,61.86687486878138 L 19.476859872637995,78.89648420110193 L 19.47686004637612,78.89648435868364 L 19.47686021990962,78.89648420087644 L 25.71824819460152,72.63349168941916 L 25.71824835119655,72.63349151609901 L 25.71824819490867,72.63349134250191 L 8.785873586104108,55.58222978849079 L 8.785873413032103,55.582229630524864 L 8.785873238918187,55.58222978734177 L 2.461876089951707,61.86687452148525 L 2.461875931858474,61.866874694853216 z"
-       id="path41" /></g><g
+      id="room-gf02" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"/></g><g
      id="g42"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -776,7 +796,9 @@
        stroke-width="0"
        opacity="1"
        d="M 68.70840455710275,72.37136840814536 L 68.70840471400632,72.37136858101847 L 74.82013685192277,78.47690565092525 L 74.82013702403735,78.47690580690976 L 74.82013719833147,78.47690565336462 L 83.24027997354841,70.2989503680167 L 83.24028013468285,70.298950195197 L 83.24027997595655,70.29895002016272 L 76.95048540386254,64.01850908524386 L 76.95048522955311,64.01850892755385 L 76.95048505641832,64.01850908653292 L 68.7084047127607,72.3713682341497 L 68.70840455710275,72.37136840814536 z"
-       id="path89" /></g><g
+      id="room-gf12b" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"/></g><g
      id="g90"><path
        fill-rule="evenodd"
        fill="#000000"
@@ -1078,7 +1100,9 @@
        stroke-width="0"
        opacity="1"
        d="M 60.17915727357311,80.77400207524845 L 60.17915743178643,80.77400224954074 L 66.3077390848123,86.88992292306033 L 66.30773925785135,86.88992307963609 L 66.3077394316458,86.88992292389929 L 74.82013684861535,78.47690599601763 L 74.82013700749224,78.47690582270984 L 74.82013684954725,78.47690564855213 L 68.70840471380544,72.37136858081779 L 68.70840454095973,72.37136842424064 L 68.70840436702677,72.37136857960917 L 60.179157432906216,80.77400190197925 L 60.17915727357311,80.77400207524845 z"
-       id="path124" /></g><text
+     id="room-gf13" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"/></g><text
      xml:space="preserve"
      style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:1;paint-order:stroke markers fill"
      x="-12.711057"
@@ -1231,46 +1255,304 @@
        id="tspan127-8"
        style="stroke-width:1"
        x="61.44442"
-       y="-40.394894">GF09</tspan></text><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97"
-     cx="24.586515"
-     cy="21.235338"
+       y="-40.394894">GF09</tspan></text><path
+     style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 7.6214895,36.272644 H 13.408176"
+   id="path131" />
+
+     
+    
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf55"
+      data-room-id="room-gf55"
+     class="hallway"
+     cx="21.291197"
+     cy="63.603439"
      rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-3"
-     cx="70.908333"
-     cy="21.135538"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-gf02"
+      data-room-id="room-gf02"
+     class="hallway"
+     cx="19.594595"
+     cy="65.212715"
      rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-1"
-     cx="79.904167"
-     cy="59.235538"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf72"
+      data-room-id="room-gf72"
+     class="hallway"
+     cx="21.291197"
+     cy="63.603439"
      rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-31"
-     cx="72.231247"
-     cy="66.643875"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf56"
+      data-room-id="room-gf56"
+     class="hallway"
+     cx="14.754289"
+     cy="57.041576"
      rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-9"
-     cx="64.558334"
-     cy="74.052208"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf57"
+      data-room-id="room-gf57"
+     class="hallway"
+     cx="14.754289"
+     cy="53.648373"
      rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-17"
-     cx="28.310417"
-     cy="74.052208"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf58"
+      data-room-id="room-gf58"
+     class="hallway"
+     cx="13.556687"
+     cy="51.65237"
      rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-97"
-     cx="17.727083"
-     cy="63.204288"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-gf59"
+      data-room-id="room-gf59"
+     class="hallway"
+     cx="13.556687"
+     cy="32.966389"
      rx="0.26458335"
-     ry="0.23345588" /></svg>
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf60"
+      data-room-id="room-gf60"
+     class="hallway"
+     cx="25.592871"
+     cy="20.902821"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+    id="hallway-gf05"
+      data-room-id="room-gf05"
+     class="hallway"
+     cx="24.195669"
+     cy="19.630369"
+     rx="0.26458335"
+     ry="0.23345588" /> 
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf61"
+      data-room-id="room-gf61"
+     class="hallway"
+     cx="33.743629"
+     cy="12.749919"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf62"
+      data-room-id="room-gf62"
+     class="hallway"
+     cx="49.973625"
+     cy="12.749919"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-gf63"
+      data-room-id="room-gf63"
+     class="hallway"
+     cx="61.924694"
+     cy="12.749919"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf64"
+      data-room-id="room-gf64"
+     class="hallway"
+     cx="73.462784"
+     cy="24.328459"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf09"
+      data-room-id="room-gf09"
+     class="hallway"
+     cx="74.360985"
+     cy="23.467682"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-gf65"
+      data-room-id="room-gf65"
+     class="hallway"
+     cx="81.309563"
+     cy="32.162769"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf66"
+      data-room-id="room-gf66"
+     class="hallway"
+     cx="81.309563"
+     cy="36.316948"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+       id="hallway-gf67"
+      data-room-id="room-gf67"
+     class="hallway"
+     cx="81.309563"
+     cy="57.636749"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+      <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-gf12a"
+      data-room-id="room-gf12a"
+     class="hallway"
+     cx="79.538109"
+     cy="59.445629"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf12b"
+      data-room-id="room-gf12b"
+     class="hallway"
+     cx="73.012581"
+     cy="65.962959"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf13"
+      data-room-id="room-gf13"
+     class="hallway"
+     cx="65.739639"
+     cy="73.210945"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-gf68"
+      data-room-id="room-gf68"
+     class="hallway"
+     cx="62.341976"
+     cy="76.649948"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf69"
+      data-room-id="room-gf69"
+     class="hallway"
+     cx="58.063046"
+     cy="76.649948"
+     rx="0.26458335"
+     ry="0.23345588" />
+     
+      <ellipse 
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+    id="hallway-gf49"
+     data-room-id="room-gf49"
+     class="hallway"
+     cx="39.587547"
+     cy="76.649948"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+    id="hallway-gf50"
+     data-room-id="room-gf50"
+     class="hallway"
+     cx="36.692959"
+     cy="76.649948"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-gf51"
+     data-room-id="room-gf51"
+     class="hallway"
+     cx="34.37299"
+     cy="76.649948"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf52"
+     data-room-id="room-gf52"
+     class="hallway"
+     cx="36.692959"
+     cy="72.159973"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf53"
+     data-room-id="room-gf53"
+     class="hallway"
+     cx="30.041796"
+     cy="72.318756"
+     rx="0.26458335"
+     ry="0.23345588" />
+     
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-gf01"
+      data-room-id="room-gf01"
+     class="hallway"
+     cx="28.383415"
+     cy="74.091812"
+     rx="0.26458335"
+     ry="0.23345588" />
+     
+     <ellipse
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf54"
+     data-room-id="room-gf54"
+     class="hallway"
+     cx="30.041796"
+     cy="72.318756"
+     rx="0.26458335"
+     ry="0.23345588" />
+         
+     <path id="route-path" stroke="#3483cb" stroke-width="1" fill="none" class="directions" stroke-linejoin="round"></path>
+    
+    </svg>

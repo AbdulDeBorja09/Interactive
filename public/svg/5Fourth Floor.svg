@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
+display="none"
    width="37.541412353515625mm"
    height="30.08270263671875mm"
    viewBox="0 0 37.541412353515625 30.08270263671875"
    version="1.1"
-    id="4F"
+    id="4F" 
    class="floor-svg" 
-   style="display: none;"
+   
    sodipodi:docname="5Fourth Floor.svg"
    xml:space="preserve"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"

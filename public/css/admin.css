@@ -198,3 +198,31 @@ body {
     border-radius: 50px;
     margin-top: 30px;
 }
+.error-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    top: 10px;
+    padding: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999999;
+}
+.error-container .error-alert {
+    background-color: #bd1419;
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+
+    justify-content: space-between;
+    box-shadow: 0px 0px 3px 0px #646464b6;
+}
+.error-container .success-alert {
+    background-color: #1c8217;
+    color: white;
+    border-radius: 3px;
+    padding: 10px;
+    justify-content: space-between;
+    box-shadow: 0px 0px 3px 0px #646464b6;
+}

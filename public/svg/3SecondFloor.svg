@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
+display="none"
    width="106.73756408691406mm"
    height="98.2262077331543mm"
    viewBox="0 0 106.73756408691406 98.2262077331543"
    version="1.1"
-   id="2F" 
-   class="floor-svg" 
-   style="display: none;"
+   id="2F"
+   class="floor-svg"
+   data-name="room-2f" 
    sodipodi:docname="3Second Floor Plan.svg"
    xml:space="preserve"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
@@ -25,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.5010515"
-     inkscape:cx="41.637479"
-     inkscape:cy="96.265851"
+     inkscape:zoom="2.1228074"
+     inkscape:cx="179.71484"
+     inkscape:cy="204.68178"
      inkscape:window-width="1600"
      inkscape:window-height="837"
      inkscape:window-x="-8"
@@ -67,7 +68,9 @@
        stroke-width="0"
        opacity="1"
        d="M 20.145729081219066,25.39004707340036 L 20.145729238290834,25.390047247352125 L 26.965736215596078,32.23517209752521 L 26.96573638916809,32.23517225539699 L 26.965736562893376,32.23517209769383 L 35.588798349726595,23.597147161438247 L 35.58879850674535,23.597146987913547 L 35.58879834975846,23.59714681435995 L 28.793266469618395,16.78731935694571 L 28.793266296357142,16.78731919956366 L 28.793266122522873,16.787319356312537 L 20.145729239060895,25.390046900147013 L 20.145729081219066,25.39004707340036 z"
-       id="path4" /></g><g
+       id="room-2f08" 
+       class="room"  
+       onclick="showRoomInfo(this.id)" /></g><g
      id="g5"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -99,7 +102,9 @@
        stroke-width="0"
        opacity="1"
        d="M 100.77561951862245,45.61165236256399 L 100.7756197543045,45.61165237357151 L 106.7171780999547,45.59494018623536 L 106.71717833331402,45.59494017414646 L 106.71717834515499,45.59493994077434 L 106.72528076128863,40.96578622596117 L 106.72528075018124,40.96578599174025 L 106.72528051598184,40.96578598018856 L 100.82149530011799,40.964920043981095 L 100.82149506740231,40.96492005530857 L 100.82149505374387,40.96492028789903 L 100.775619509279,45.61165212681008 L 100.77561951862245,45.61165236256399 z"
-       id="path8" /></g><g
+        class="stairs"
+        id="stair-2f-d"
+        data-name="stair-d" /></g><g
      id="g9"><path
        fill-rule="evenodd"
        fill="#da9849"
@@ -107,7 +112,9 @@
        stroke-width="0"
        opacity="1"
        d="M 9.104702007368369,45.59494017408658 L 9.104702241289385,45.59494018620697 L 15.066272490792263,45.610973357495915 L 15.066272724241006,45.610973346688475 L 15.066272737321638,45.61097311335594 L 15.099090574436346,40.95624566852265 L 15.099090564535222,40.956245433886956 L 15.099090330007408,40.956245421697204 L 9.11586786027939,40.94005584783234 L 9.115867626217938,40.940055858698514 L 9.115867614157136,40.94005609270149 L 9.104701996438344,45.59493994010682 L 9.104702007368369,45.59494017408658 z"
-       id="path9" /></g><g
+        class="stairs"
+        data-name="stair-a"
+        id="stair-2f-a"/></g><g
      id="g10"><path
        fill-rule="evenodd"
        fill="#000000"
@@ -203,7 +210,9 @@
        stroke-width="0"
        opacity="1"
        d="M 11.224411027282832,34.0641479493665 L 11.224411184790654,34.06414812460043 L 18.15160352541951,41.04440290153335 L 18.15160369876394,41.0444030598173 L 18.15160387275492,41.04440290224421 L 26.965736215699412,32.23517244509279 L 26.965736372946452,32.235172271711356 L 26.965736216066716,32.23517209799753 L 20.14572923685956,25.390045338566992 L 20.145729064814923,25.39004518193779 L 20.145728890303708,25.390045335814005 L 11.224411187895805,34.06414777697417 L 11.224411027282832,34.0641479493665 z"
-       id="path21" /></g><g
+      id="room-2f07" 
+       class="room"
+         onclick="showRoomInfo(this.id)"   /></g><g
      id="g22"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -211,7 +220,9 @@
        stroke-width="0"
        opacity="1"
        d="M 28.79326631212383,16.78731918321612 L 28.793266467683466,16.787319355006804 L 35.58879453478154,23.597146814079604 L 35.588794708264054,23.59714697164133 L 35.5887948819806,23.597146814337727 L 44.358288697573904,14.835291927316629 L 44.3582894245748,14.835291268942163 L 44.358290212575156,14.835290684953577 L 44.35829105399453,14.835290180968768 L 44.358291940738546,14.835289761836005 L 44.35829286427687,14.835289431587293 L 44.358293815725155,14.83528919339958 L 44.35829478593061,14.835289049564205 L 44.35829576555997,14.835289001464844 L 48.74821829089073,14.835289001464844 L 48.748218524881715,14.835288989969603 L 48.74821853637695,14.835288755978642 L 48.74821853637695,5.768482453836063 L 48.74821852487309,5.768482219763036 L 48.74821829079279,5.768482208405861 L 41.98561883421215,5.772720336761835 L 41.98561859605528,5.7727203484881064 L 41.98561841824383,5.772720507356849 L 38.676334057972305,9.031868414779886 L 38.67633331359741,9.03186907811387 L 38.67633250686707,9.031869664025216 L 38.67633164580103,9.031870166689348 L 38.6763307389592,9.031870581109253 L 38.67632979535656,9.031870903165157 L 38.676328824373506,9.031871129655482 L 38.67632783566265,9.031871258328675 L 38.67632683905281,9.031871287905586 L 38.67632584445136,9.031871218092194 L 38.676324861745684,9.031871049582513 L 38.67632390070492,9.031870784051712 L 38.676322970882836,9.031870424139445 L 38.67632208152284,9.031869973423623 L 38.67632124146611,9.03186943638484 L 38.67632045906372,9.031868818361827 L 38.676319742093554,9.031868125498391 L 37.49300400825238,7.768325979755215 L 37.49300384509873,7.768325821398206 L 37.49300367962564,7.768325977329927 L 28.793266464746832,16.787319008811153 L 28.79326631212383,16.78731918321612 z"
-       id="path22" /></g><g
+      id="room-2f10a" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"  /></g><g
      id="g23"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -219,7 +230,9 @@
        stroke-width="0"
        opacity="1"
        d="M 92.57266236500494,59.02647398753905 L 92.5726625989346,59.02647399912892 L 100.68512701410206,59.029960632219264 L 100.68512724701696,59.02996062093732 L 100.68512726041658,59.029960388134725 L 100.74324035430875,52.32297540527717 L 100.74324034475154,52.3229751702661 L 100.7432401098505,52.322975158303876 L 92.57266259924718,52.310134888081485 L 92.57266236503251,52.31013489923031 L 92.57266235351562,52.310135133427345 L 92.57266235351562,59.026473753604485 L 92.57266236500494,59.02647398753905 z"
-       id="path23" /></g><g
+       id="room-2f17" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"  /></g><g
      id="g24"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -227,7 +240,9 @@
        stroke-width="0"
        opacity="1"
        d="M 92.55921937191367,45.439987194171195 L 92.5592193608329,45.43998742860486 L 92.57266235303635,52.310134642761255 L 92.57266236493997,52.31013487626655 L 92.57266259844994,52.310134888080235 L 100.74324011145033,52.32297515830639 L 100.74324034504718,52.32297514722144 L 100.74324035759955,52.32297491369863 L 100.77561950567684,45.45029855535001 L 100.77561949523863,45.45029832085449 L 100.77561926080945,45.45029830901742 L 92.5592196063397,45.43998718292589 L 92.55921937191367,45.439987194171195 z"
-       id="path24" /></g><g
+       id="room-2f16" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"  /></g><g
      id="g25"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -235,7 +250,9 @@
        stroke-width="0"
        opacity="1"
        d="M 15.025501262803687,59.00077055734695 L 15.025501497079555,59.00077056943046 L 23.25040792675129,59.02026748598947 L 23.250408161079527,59.02026747501701 L 23.250408172607422,59.020267240715434 L 23.250408172607422,52.30392862097504 L 23.250408161090625,52.30392838677898 L 23.250407926876733,52.30392837562868 L 15.057304626821638,52.3167495723713 L 15.057304393678448,52.31674958414445 L 15.057304381160892,52.316749817248805 L 15.02550125239051,59.000770322990924 L 15.025501262803687,59.00077055734695 z"
-       id="path25" /></g><g
+       id="room-2f05a" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"  /></g><g
      id="g26"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -243,7 +260,9 @@
        stroke-width="0"
        opacity="1"
        d="M 15.057304393879061,52.317035663492625 L 15.057304628291963,52.31703567465533 L 23.250407927677653,52.30392837563598 L 23.250408161183454,52.3039283638161 L 23.250408173086683,52.303928130314475 L 23.26385116529042,45.43378091601931 L 23.263851154221268,45.433780681698195 L 23.263850919917736,45.433780670262934 L 15.067501313308096,45.437011718653345 L 15.06750107956767,45.4370117302149 L 15.067501067751842,45.437011963942595 L 15.057304382688761,52.317035429081045 L 15.057304393879061,52.317035663492625 z"
-       id="path26" /></g><g
+       id="room-2f05b" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"  /></g><g
      id="g27"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -371,7 +390,9 @@
        stroke-width="0"
        opacity="1"
        d="M 71.57597352223743,5.723934185079225 L 71.57597351074219,5.723934419070152 L 71.57597351074219,14.855903380739147 L 71.57597352249222,14.855903620637472 L 71.57597368339766,14.855903798959552 L 84.55638105179813,27.897643868359793 L 84.55638122557905,27.89764402655814 L 84.55638139922722,27.897643868214054 L 91.48297101704371,20.926639732365352 L 91.48297117481334,20.926639557038175 L 91.48297101382902,20.92663938465805 L 78.14498918930809,7.990539721125433 L 78.14498901387647,7.990539566893798 L 78.14498884241719,7.990539725530166 L 77.12605997168552,9.030258547687813 L 77.12605924336874,9.030259220623154 L 77.12605845198593,9.030259818118363 L 77.12605760531862,9.03026033429835 L 77.12605671169202,9.030260764087581 L 77.12605577989302,9.030261103259994 L 77.1260548190839,9.03026134848055 L 77.12605383871217,9.030261497338026 L 77.12605284841769,9.030261548368728 L 77.1260518579379,9.030261501070873 L 77.12605087701206,9.030261355909536 L 77.12604991528552,9.030261114312072 L 77.12604898221477,9.030260778654078 L 77.12604808697462,9.030260352236034 L 77.12604723836782,9.030259839250858 L 77.12604644473862,9.030259244742664 L 77.12604571389068,9.03025857455718 L 73.86131304008424,5.723934349672368 L 73.86131286119299,5.723934185590806 L 73.86131261874556,5.723934173583984 L 71.57597375622842,5.723934173583984 L 71.57597352223743,5.723934185079225 z"
-       id="path42" /></g><g
+       id="room-2f13" 
+       class="room" 
+         onclick="showRoomInfo(this.id)"  /></g><g
      id="g43"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -379,7 +400,9 @@
        stroke-width="0"
        opacity="1"
        d="M 84.55638124171566,27.897644042954436 L 84.55638139841447,27.897644216289034 L 97.6201322728905,40.99856549993619 L 97.62013244630774,40.99856565755631 L 97.62013262008615,40.99856550033453 L 104.47929365037284,34.15138261885653 L 104.47929380720073,34.15138244621219 L 104.4792936520347,34.15138227207247 L 91.48297136477747,20.926639733303112 L 91.4829711913605,20.926639573472944 L 91.48297101706473,20.9266397323442 L 84.55638139810648,27.89764386934197 L 84.55638124171566,27.897644042954436 z"
-       id="path43" /></g><text
+       id="room-2f14" 
+       class="room"  
+         onclick="showRoomInfo(this.id)" /></g><text
      xml:space="preserve"
      style="font-size:2.29977px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke-width:0.724339;paint-order:stroke markers fill"
      x="85.965416"
@@ -425,7 +448,9 @@
        stroke-width="0"
        opacity="1"
        d="M 80.09686280938978,80.72108459481602 L 80.09686296677727,80.7210847693995 L 87.11052686607495,87.76963025877173 L 87.11052703866191,87.76963041603557 L 87.11052721295239,87.76963026066173 L 104.58538800789205,70.58648698917487 L 104.5853881671727,70.58648681631678 L 104.5853880097852,70.58648664173347 L 97.57171648109295,63.537941152360816 L 97.57171630850607,63.53794099509723 L 97.57171613421583,63.53794115047091 L 80.0968629686702,80.72108442195812 L 80.09686280938978,80.72108459481602 z"
-       id="path46" /></g><g
+     id="room-2f19" 
+       class="room"  
+         onclick="showRoomInfo(this.id)" /></g><g
      id="g47"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -433,7 +458,9 @@
        stroke-width="0"
        opacity="1"
        d="M 71.4103851480133,89.4145202636887 L 71.41038530467218,89.41452043736768 L 78.4240415745754,96.46305829734547 L 78.42404174806387,96.46305845534332 L 78.42404192188073,96.4630582977069 L 87.11052686537681,87.76963060546474 L 87.11052702239682,87.76963043211208 L 87.11052686573805,87.76963025843317 L 80.0968629664403,80.72108476906084 L 80.09686279295175,80.72108461106296 L 80.09686261913497,80.72108476869958 L 71.410385305033,89.41452009033608 L 71.4103851480133,89.4145202636887 z"
-       id="path47" /></g><g
+       id="room-2f20" 
+       class="room"  
+         onclick="showRoomInfo(this.id)" /></g><g
      id="g48"><path
        fill-rule="evenodd"
        fill="#da9849"
@@ -441,7 +468,9 @@
        stroke-width="0"
        opacity="1"
        d="M 68.61953737093407,77.63943481419234 L 68.61953753782042,77.63943498614074 L 71.90485364522125,80.6998441967919 L 71.90485382052917,80.69984434504859 L 71.90485399046527,80.69984419066414 L 76.08068830287877,76.52344530310175 L 76.08068846027817,76.52344512940377 L 76.08068830268176,76.52344495588454 L 72.92825334687318,73.37773149591828 L 72.9282531737926,73.37773133931888 L 72.92825300002193,73.37773149515199 L 68.61953753259803,77.6394346373247 L 68.61953737093407,77.63943481419234 z"
-       id="path48" /></g><g
+       class="stairs"
+        data-name="stair-c" 
+        id="stair-2f-c"/></g><g
      id="g49"><path
        fill-rule="evenodd"
        fill="#000000"
@@ -497,7 +526,9 @@
        stroke-width="0"
        opacity="1"
        d="M 11.350952164892142,70.24560546868909 L 11.350952324074752,70.24560564185157 L 20.12630826711426,78.89427167905082 L 20.126308441102644,78.89427183452528 L 20.12630861393501,78.89427167776681 L 26.87075025393681,72.14802568605096 L 26.870750411052317,72.14802551267898 L 26.870750254286733,72.14802533899051 L 18.565985732346807,63.807467525910816 L 18.565985076576215,63.807466799441606 L 18.56598449495819,63.80746601235009 L 18.56598399306342,63.80746517217498 L 18.56598357569902,63.8074642869634 L 18.56598324686247,63.80746336519385 L 18.56598300970335,63.807462415694964 L 18.565982866493144,63.807461447560975 L 18.565982818603516,63.8074604700646 L 18.565982818603516,63.496620424620126 L 18.56598280702792,63.496620189865915 L 18.5659825722103,63.49662017965873 L 18.09539437822286,63.49936294413626 L 18.09539413937693,63.49936295718058 L 18.09539396221863,63.499363117905496 L 11.350952322788272,70.24560529435269 L 11.350952164892142,70.24560546868909 z"
-       id="path55" /></g><g
+      id="room-2f03" 
+       class="room"  
+         onclick="showRoomInfo(this.id)" /></g><g
      id="g56"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -505,7 +536,9 @@
        stroke-width="0"
        opacity="1"
        d="M 20.126304642767572,78.89427185057019 L 20.1263048005461,78.8942720240422 L 24.50807935509623,83.26031476831756 L 24.508079528792937,83.26031492519544 L 24.508079702186276,83.26031476798228 L 31.252525155844044,76.51406877730781 L 31.252525313287116,76.51406860353137 L 31.252525155508586,76.51406843005937 L 26.87075060095846,72.148025685784 L 26.87075042726175,72.14802552890612 L 26.87075025386841,72.14802568611928 L 20.126304800210644,78.89427167679375 L 20.126304642767572,78.89427185057019 z"
-       id="path56" /></g><g
+      id="room-2f02" 
+       class="room" 
+         onclick="showRoomInfo(this.id)" /></g><g
      id="g57"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -513,7 +546,9 @@
        stroke-width="0"
        opacity="1"
        d="M 24.508079545111368,83.26031494139048 L 24.508079702890356,83.26031511486237 L 37.585857217644964,96.29109174585717 L 37.58585739134175,96.29109190273456 L 37.58585756473498,96.29109174552167 L 44.330303018392506,89.54485338424158 L 44.330303175835894,89.54485321046498 L 44.33030301805692,89.544853036993 L 31.25252550330239,76.51406877660396 L 31.25252532960552,76.5140686197264 L 31.252525156212272,76.51406877693948 L 24.508079702554625,83.26031476761383 L 24.508079545111368,83.26031494139048 z"
-       id="path57" /></g><g
+       id="room-2f01" 
+       class="room"
+         onclick="showRoomInfo(this.id)"  /></g><g
      id="g58"><path
        fill-rule="evenodd"
        fill="#000000"
@@ -537,7 +572,9 @@
        stroke-width="0"
        opacity="1"
        d="M 39.65795137118194,76.38970947271892 L 39.6579515274982,76.38970964686187 L 44.038032358464946,80.81264478352747 L 44.03803253177818,80.8126449421046 L 44.03803270586162,80.81264478437318 L 47.2144239605029,77.6362611591256 L 47.21442411723971,77.63626098627091 L 47.214423961738234,77.63626081230402 L 42.853336507039764,73.21260088329855 L 42.85333633414672,73.21260072438214 L 42.85333615967466,73.21260088156329 L 39.65795152884078,76.38970929979034 L 39.65795137118194,76.38970947271892 z"
-       id="path60" /></g><g
+        class="stairs"
+        data-name="stair-b"
+        id="stair-2f-b" /></g><g
      id="g61"><path
        fill-rule="evenodd"
        fill="#000000"
@@ -1054,82 +1091,436 @@
        id="tspan1-8-4-0-0-9-0-1-6-8-9-5"
        style="stroke-width:0.724339"
        x="94.233566"
-       y="49.735428">2F16</tspan></text><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97"
-     cx="45.772915"
-     cy="17.431372"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-5"
-     cx="76.464584"
-     cy="21.135538"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-3"
-     cx="89.429169"
-     cy="33.570953"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-32"
-     cx="92.074997"
-     cy="49.445953"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-7"
-     cx="92.074997"
-     cy="55.266788"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-0"
-     cx="90.222916"
-     cy="69.554291"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-59"
-     cx="75.67083"
-     cy="83.577202"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-37"
-     cx="38.100002"
-     cy="82.254288"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-8"
-     cx="29.633333"
-     cy="73.787621"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-6"
-     cx="23.018749"
-     cy="67.173035"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-02"
-     cx="24.077084"
-     cy="56.325123"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-4"
-     cx="24.077084"
-     cy="49.710537"
-     rx="0.26458335"
-     ry="0.23345588" /><ellipse
-     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
-     id="path117-3-0-97-1"
-     cx="19.84375"
-     cy="40.450123"
-     rx="0.26458335"
-     ry="0.23345588" /></svg>
+       y="49.735428">2F16</tspan></text>
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f10a"
+     class="hallway"
+     data-room-id="room-2f10a"
+     cx="46.17799"
+     cy="21.119108"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f54"
+     class="hallway"
+     data-room-id="room-2f54"
+     cx="60.70599"
+     cy="21.119108"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+    id="hallway-2f13"
+     class="hallway"
+     data-room-id="room-2f13"
+     cx="75.864807"
+     cy="21.119108"
+     r="0.26458332" />
+
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f55"
+     class="hallway"
+     data-room-id="room-2f55"
+     cx="77.836777"
+     cy="23.024977"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f56"
+     class="hallway"
+     data-room-id="room-2f56"
+     cx="75.523293"
+     cy="25.437609"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f57"
+     class="hallway"
+     data-room-id="room-2f57"
+     cx="83.282036"
+     cy="33.19635"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f58"
+     class="hallway"
+     data-room-id="room-2f58"
+     cx="85.529419"
+     cy="30.971001"
+     r="0.26458332" />
+     
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f14"
+     class="hallway"
+     data-room-id="room-2f14"
+     cx="88.512955"
+     cy="33.907791"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f59"
+     class="hallway"
+     data-room-id="room-2f59"
+     cx="95.882202"
+     cy="41.308197"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f60"
+     class="hallway"
+     data-room-id="room-2f60"
+     cx="95.882202"
+     cy="44.159298"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f61"
+     class="hallway"
+     data-room-id="room-2f61"
+     cx="91.122574"
+     cy="44.159298"
+     r="0.26458332" />
+     
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f16"
+     class="hallway"
+     data-room-id="room-2f16"
+     cx="91.122574"
+     cy="49.300632"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f17"
+     class="hallway"
+     data-room-id="room-2f17"
+     cx="91.122574"
+     cy="55.875309"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f62"
+     class="hallway"
+     data-room-id="room-2f62"
+     cx="91.122574"
+     cy="61.047802"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f63"
+     class="hallway"
+     data-room-id="room-2f63"
+     cx="96.061371"
+     cy="61.047802"
+     r="0.26458332" />
+     
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f64"
+     class="hallway"
+     data-room-id="room-2f64"
+     cx="96.061371"
+     cy="62.821472"
+     r="0.26458332" />
+     
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f19"
+     class="hallway"
+     data-room-id="room-2f19"
+     cx="87.694275"
+     cy="71.150009"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f20"
+     class="hallway"
+     data-room-id="room-2f20"
+     cx="76.321373"
+     cy="82.546501"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f65"
+     class="hallway"
+     data-room-id="room-2f65"
+     cx="70.593933"
+     cy="88.25309"
+     r="0.26458332" />
+
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f66"
+     class="hallway"
+     data-room-id="room-2f66"
+     cx="44.725811"
+     cy="88.25309"
+     r="0.26458332" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f01"
+     class="hallway"
+     data-room-id="room-2f01"
+     cx="37.995338"
+     cy="81.5382"
+     r="0.26458332" />
+      
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f02"
+     class="hallway"
+     data-room-id="room-2f02"
+     cx="30.049641"
+     cy="73.617989"
+     r="0.26458332" />
+       
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f02"
+     class="hallway"
+     data-room-id="room-2f03"
+     cx="24.552366"
+     cy="68.120712"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f50"
+     class="hallway"
+     data-room-id="room-2f50"
+     cx="22.646498"
+     cy="66.181793"
+     r="0.26458332" />
+
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f51"
+     class="hallway"
+     data-room-id="room-2f51"
+     cx="22.646498"
+     cy="60.034538"
+     r="0.26458332" />
+
+      <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f52"
+     class="hallway"
+     data-room-id="room-2f52"
+     cx="24.761683"
+     cy="60.034538"
+     r="0.26458332" />
+
+      <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-2f05a"
+     class="hallway"
+     data-room-id="room-2f05a"
+     cx="24.761683"
+     cy="55.528755"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f05b"
+     class="hallway"
+     data-room-id="room-2f05b"
+     cx="24.761683"
+     cy="48.455524"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f07"
+     class="hallway"
+     data-room-id="room-2f07"
+     cx="24.761683"
+     cy="43.205132"
+     r="0.26458332" />
+
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f08"
+     class="hallway"
+     data-room-id="room-2f08"
+     cx="24.761683"
+     cy="43.205132"
+     r="0.26458332" />
+
+       
+       <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle100"
+     cx="46.17799"
+     cy="16.258211"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle101"
+     cx="50.509174"
+     cy="21.119108"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle102"
+     cx="50.470222"
+     cy="16.258211"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle103"
+     cx="58.088585"
+     cy="21.119108"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle104"
+     cx="58.093697"
+     cy="16.225161"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle106"
+     cx="60.70599"
+     cy="22.941944"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle108"
+     cx="76.525803"
+     cy="20.513197"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle114"
+     cx="89.221832"
+     cy="33.230068"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle116"
+     cx="95.882202"
+     cy="43.115452"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle117"
+     cx="100.02643"
+     cy="43.115452"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle121"
+     cx="91.995041"
+     cy="49.300632"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle123"
+     cx="92.01062"
+     cy="55.875309"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle128"
+     cx="88.520515"
+     cy="71.838547"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle130"
+     cx="77.022461"
+     cy="83.091797"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle133"
+     cx="46.796928"
+     cy="88.25309"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle134"
+     cx="46.796928"
+     cy="80.47538"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle135"
+     cx="46.025768"
+     cy="79.638123"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle136"
+     cx="69.975815"
+     cy="79.638123"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle137"
+     cx="69.248718"
+     cy="80.43132"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle138"
+     cx="69.248718"
+     cy="88.260887"
+     r="0.26458332" />
+     
+
+     
+     
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle141"
+     cx="37.450047"
+     cy="82.05233"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle143"
+     cx="29.53186"
+     cy="74.157799"
+     r="0.26458332" />
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle145"
+     cx="23.99052"
+     cy="68.70459"
+     r="0.26458332" />
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle150"
+     cx="23.781206"
+     cy="55.528755"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle152"
+     cx="23.842474"
+     cy="48.455524"
+     r="0.26458332" /><circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="circle154"
+     cx="15.834456"
+     cy="43.205132"
+     r="0.26458332" />
+     
+     <path id="route-path" stroke="#3483cb" stroke-width="1" fill="none" class="directions" stroke-linejoin="round"></path>
+     
+     </svg>

@@ -94,8 +94,8 @@ class roomseeder extends Seeder
             ],
             [
                 'floor' => 'Lower Ground',
-                'room_id' => 'room-lg14&15',
-                'text_id' => 'text-lg14&15',
+                'room_id' => 'room-lg14',
+                'text_id' => 'text-lg14',
                 'room_name' => 'District Office of Cong. Cha Hernandez',
                 'room_desc' => 'Description for Room',
                 'created_at' => now(),
@@ -265,8 +265,8 @@ class roomseeder extends Seeder
 
             [
                 'floor' => 'Ground Floor',
-                'room_id' => 'room-gf12',
-                'text_id' => 'text-gf12',
+                'room_id' => 'room-gf12a',
+                'text_id' => 'text-gf12a',
                 'room_name' => 'Tricycle Franchising Office',
                 'room_desc' => 'Description for Room',
                 'created_at' => now(),
@@ -275,8 +275,8 @@ class roomseeder extends Seeder
 
             [
                 'floor' => 'Ground Floor',
-                'room_id' => 'room-gf12-2',
-                'text_id' => 'text-gf12-2',
+                'room_id' => 'room-gf12b',
+                'text_id' => 'text-gf12b',
                 'room_name' => 'Business Permits and Licensing Office',
                 'room_desc' => 'Description for Room',
                 'created_at' => now(),
@@ -324,8 +324,17 @@ class roomseeder extends Seeder
 
             [
                 'floor' => 'Second Floor',
-                'room_id' => 'room-2f05',
-                'text_id' => 'text-2f05',
+                'room_id' => 'room-2f05a',
+                'text_id' => 'text-2f05a',
+                'room_name' => 'COA',
+                'room_desc' => 'Description for Room',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'floor' => 'Second Floor',
+                'room_id' => 'room-2f05b',
+                'text_id' => 'text-2f05b',
                 'room_name' => 'COA',
                 'room_desc' => 'Description for Room',
                 'created_at' => now(),
@@ -461,7 +470,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f02',
@@ -471,7 +480,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f03',
@@ -481,7 +490,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f04',
@@ -491,7 +500,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f05',
@@ -501,7 +510,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f06',
@@ -511,7 +520,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f08',
@@ -521,7 +530,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f09',
@@ -531,7 +540,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f10',
@@ -541,7 +550,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f11',
@@ -551,7 +560,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f12',
@@ -561,7 +570,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f13',
@@ -571,7 +580,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f14',
@@ -581,7 +590,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f15',
@@ -591,7 +600,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f19',
@@ -601,7 +610,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f20',
@@ -611,7 +620,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f21',
@@ -621,7 +630,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f22',
@@ -631,7 +640,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f23',
@@ -641,7 +650,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f24',
@@ -651,7 +660,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f25',
@@ -661,7 +670,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f26',
@@ -671,7 +680,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f29',
@@ -681,7 +690,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f30',
@@ -691,7 +700,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f31',
@@ -701,7 +710,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f32',
@@ -711,7 +720,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f33',
@@ -721,7 +730,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
             [
                 'floor' => 'Third Floor',
                 'room_id' => 'room-3f34',
@@ -731,7 +740,7 @@ class roomseeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+
 
         ]);
     }
