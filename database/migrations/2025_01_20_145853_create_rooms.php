@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('text_id');
             $table->string('room_name')->nullable();
             $table->string('room_desc')->nullable();
+            $table->boolean('status')->default(1);
             $table->timestamps();
         });
     }

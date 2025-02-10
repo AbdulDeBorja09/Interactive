@@ -115,7 +115,9 @@ function calculateDistance(el1, el2) {
         (el1.tagName.toLowerCase() === "circle" &&
             el2.tagName.toLowerCase() === "circle") ||
         (el1.tagName.toLowerCase() === "ellipse" &&
-            el2.tagName.toLowerCase() === "ellipse")
+            el2.tagName.toLowerCase() === "ellipse") ||
+        (el1.tagName.toLowerCase() === "path" &&
+            el2.tagName.toLowerCase() === "path")
     ) {
         x1 = parseFloat(el1.getAttribute("cx"));
         y1 = parseFloat(el1.getAttribute("cy"));
@@ -144,8 +146,10 @@ function drawRoute() {
     let endFloor = endRoomId.match(/(room-..)/)?.[1] || "";
 
     if (startFloor === endFloor) {
+        bottomSheet.style.height = `${minHeight}px`;
         navigateSameFloor(startFloor, startRoomId, endRoomId);
     } else {
+        bottomSheet.style.height = `${minHeight}px`;
         navigateBetweenFloors(startFloor, startRoomId, endFloor, endRoomId);
     }
 }
@@ -182,6 +186,7 @@ function navigateBetweenFloors(startFloor, startRoomId, endFloor, endRoomId) {
         stairsStart,
         startSVG
     );
+
     if (!closestStairStart) {
         alert("No available stairs on the start floor!");
         return;
@@ -191,6 +196,7 @@ function navigateBetweenFloors(startFloor, startRoomId, endFloor, endRoomId) {
     let closestStairEnd = stairsEnd.find(
         (stair) => stair.getAttribute("data-name") === closestStairStart.stairId
     );
+
     if (!closestStairEnd) {
         alert("No corresponding stair found on the destination floor!");
         return;

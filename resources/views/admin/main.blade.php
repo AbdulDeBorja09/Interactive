@@ -12,7 +12,11 @@
         $room = str_replace('room-', '', $item->room_id);
         @endphp
         <div class="content container">
-            <h2>• <span style="text-transform: uppercase">{{$room}}</span> | {{$item->room_name}}</h2>
+            <h2>
+                <span style="color: {{ $item->status == 1 ? 'rgb(30, 139, 2)' : 'rgb(180, 5, 5)' }}">•</span>
+                <span style="text-transform: uppercase">{{$room}}</span> |
+                {{$item->room_name}}
+            </h2>
             <a class="btn" href="{{url('/Admin/Edit/ '.$item->id)}}">Edit</a>
         </div>
         @endforeach

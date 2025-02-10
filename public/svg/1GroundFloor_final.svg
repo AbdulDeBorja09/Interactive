@@ -244,9 +244,8 @@
        stroke-width="0"
        opacity="1"
        d="M 1.1495240155739481e-08,33.561744701436645 L 0.0,33.56174493542763 L 0.0,37.93469595126411 L 1.156219450255081e-08,37.934696185891276 L 2.4624278755817916e-07,37.93469619631365 L 5.651210539875497,37.90724563717659 L 5.651210773433372,37.90724562458603 L 5.651210784422095,37.90724539094737 L 5.642520905031298,33.56174493511449 L 5.642520893096209,33.56174470140912 L 5.642520659367547,33.561744689941406 L 2.4548620353309247e-07,33.561744689941406 L 1.1495240155739481e-08,33.561744701436645 z"
-        id="stair-lg-a"
-        class="stairs"
-        data-name="stair-a" /></g><g
+       id="stairbox1"
+        /></g><g
      id="g7"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -339,9 +338,8 @@
        stroke-width="0"
        opacity="1"
        d="M 88.63549805837025,33.59128953175891 L 88.635498046875,33.591289765749835 L 88.635498046875,37.85256933459196 L 88.63549805837025,37.85256956858289 L 88.63549829236119,37.852569580078125 L 93.53351568400292,37.852569580078125 L 93.53351591856914,37.85256956852235 L 93.53351592909463,37.85256933390759 L 93.51480102646573,33.591289765061056 L 93.5148010140059,33.59128953169849 L 93.5148007805911,33.59128952026367 L 88.63549829236119,33.59128952026367 L 88.63549805837025,33.59128953175891 z"
-      id="stair-lg-d"
-      class="stairs"
-      data-name="stair-d" /></g><g
+      id="oldstaird"
+       /></g><g
      id="g17"><path
        fill-rule="evenodd"
        fill="#898989"
@@ -1466,7 +1464,7 @@
      id="hallway-lg53"
      class="hallway"
      data-room-id="room-lg53"
-     cx="33.999374"
+     cx="32.59374"
      cy="14.509394"
      rx="0.26458335"
      ry="0.23345588" />
@@ -1550,6 +1548,50 @@
      cy="34.072834"
      rx="0.26458335"
      ry="0.23345588" />
+
+
+       <ellipse
+     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
+      id="hallway-lg58"
+     class="hallway"
+     data-room-id="room-lg58"
+     cx="78.857196"
+     cy="34.072834"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+       <ellipse
+     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
+      id="hallway-lg59"
+     class="hallway"
+     data-room-id="room-lg59"
+     cx="78.857196"
+    cy="35.931369"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+
+       <ellipse
+     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
+      id="hallway-lg60"
+     class="hallway"
+     data-room-id="room-lg60"
+     cx="78.857196"
+    cy="35.931369"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+       <ellipse
+     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
+     id="stair-lg-d"
+     class="stairs"
+     data-name="stair-d"
+     cx="88.257196"
+    cy="35.931369"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+    
 
      <ellipse
      style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
@@ -1681,16 +1723,49 @@
      cy="42.302204"
      rx="0.26458335"
      ry="0.23345588" />
+     
+      <ellipse
+     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
+     id="hallway-lg56"
+     data-room-id="room-lg56"
+     class="hallway"
+     cx="14.929167"
+      cy="35.931369"
+     rx="0.26458335"
+     ry="0.23345588" />
 
+     <ellipse
+     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
+    id="stair-lg-a"
+    class="stairs"
+     data-name="stair-a"
+     data-room-id="room-lg56c"
+     cx="5.929167"
+     cy="35.931369"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+        <ellipse
+     style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
+     id="hallway-lg56b"
+     data-room-id="room-lg56b"
+     class="hallway"
+     cx="14.929167"
+      cy="35.931369"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+ 
      <ellipse
      style="fill:#000000;stroke-width:0.941176;paint-order:stroke markers fill"
      id="hallway-lg52"
      data-room-id="room-lg52"
      class="hallway"
      cx="14.929167"
-     cy="34.231369"
+     cy="32.231369"
      rx="0.26458335"
      ry="0.23345588" />
+
  
      
      <path id="route-path" stroke="#3483cb" stroke-width="1" fill="none" class="directions" stroke-linejoin="round"></path>

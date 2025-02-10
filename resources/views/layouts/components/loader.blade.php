@@ -1,5 +1,5 @@
 <div id="loader">
-    <img src="{{asset('../image/logo.png')}}" alt="LoaderLogo" />
+    <img rel="preload" src="{{asset('/image/logo.webp')}}" alt="LoaderLogo" />
     <h1>Calamba City Hall <br />Interactive Map</h1>
     <div class="dots-loader">
         <span></span>
@@ -16,7 +16,7 @@
         setTimeout(() => {
             document.getElementById("loader").style.display = "none";
         }, 500);
-    }, 3000); 
+    }); 
 });
 
 

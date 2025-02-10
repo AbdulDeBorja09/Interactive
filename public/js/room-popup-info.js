@@ -5,7 +5,6 @@ function showRoomInfo(roomId) {
         .then((response) => response.json())
         .then((data) => {
             if (data.success) {
-                
                 document.getElementById("popup-title").innerText =
                     data.room.room_name;
                 document.getElementById("popup-content").innerText =
@@ -22,6 +21,8 @@ function showRoomInfo(roomId) {
                     document.getElementById("start-search").value =
                         data.room.room_name;
                     document.getElementById("start-hidden").value = roomId;
+
+                    checkAndDrawRoute();
                 };
 
                 popEnd.onclick = function () {
@@ -29,10 +30,10 @@ function showRoomInfo(roomId) {
                     document.getElementById("end-search").value =
                         data.room.room_name;
                     document.getElementById("end-hidden").value = roomId;
+
+                    checkAndDrawRoute();
                 };
-
             } else {
-
                 document.getElementById("popup-title").innerText =
                     "No Info Found";
                 document.getElementById("popup-content").innerText =
@@ -42,10 +43,17 @@ function showRoomInfo(roomId) {
         .catch((error) => console.error("Error fetching room data:", error));
 }
 
+function checkAndDrawRoute() {
+    const startRoomId = document.getElementById("start-hidden").value;
+    const endRoomId = document.getElementById("end-hidden").value;
+
+    if (startRoomId && endRoomId) {
+        drawRoute();
+    }
+}
 function closePopup() {
     let popup = document.getElementById("room-popup");
     if (popup.style.display === "block") {
-
         let popStart = document.getElementById("pop-start");
         let popEnd = document.getElementById("pop-end");
 
