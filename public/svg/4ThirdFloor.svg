@@ -1608,6 +1608,35 @@ display="none"
        y="-41.450184">3F23</tspan></text>
        
       
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-3f90"
+     class="hallway"
+     data-room-id="room-3f90"
+     cx="35.946346"
+     cy="79.692276"
+     r="0.26458332" />
+
+
+    <circle
+     style="fill:#ffffff;stroke-width:1;paint-order:stroke markers fill"
+      id="stair-3f-b"
+     class="stairs"
+     data-name="stair-b"
+     cx="35.946346"
+     cy="70.962784"
+     r="0.26458332" />
+
+  <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-3f91"
+     class="hallway"
+     data-room-id="room-3f91"
+     cx="35.946346"
+     cy="79.692276"
+     r="0.26458332" />
+
       <circle
      style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-3f50"
@@ -1730,6 +1759,24 @@ display="none"
     id="hallway-3f55"
      class="hallway"
      data-room-id="room-3f55"
+     cx="9.6018286"
+     cy="36.594177"
+     r="0.26458332" />
+
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="stair-3f-a"
+     class="stairs"
+     data-name="stair-a"
+     cx="6.9333129"
+     cy="36.594177"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-3f80"
+     class="hallway"
+     data-room-id="room-3f80"
      cx="9.6018286"
      cy="36.594177"
      r="0.26458332" />
@@ -1887,12 +1934,30 @@ display="none"
      cx="83.519547"
      cy="34.294678"
      r="0.26458332" />
-
-      <circle
+    
+     <circle
      style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
     id="hallway-3f65"
      class="hallway"
      data-room-id="room-3f65"
+     cx="83.519547"
+     cy="35.194763"
+     r="0.26458332" />
+
+     <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="stair-3f-d"
+     class="stairs"
+     data-name="stair-d"
+     cx="86.978912"
+    cy="35.194763"
+     r="0.26458332" />
+
+      <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+    id="hallway-3f81"
+     class="hallway"
+     data-room-id="room-3f81"
      cx="83.519547"
      cy="35.194763"
      r="0.26458332" />
@@ -1998,10 +2063,46 @@ display="none"
      cx="59.02206"
      cy="79.692276"
      r="0.26458332" />  
+  
 
+      
 
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-3f84"
+     class="hallway"
+     data-room-id="room-3f84"
+     cx="57.672466"
+     cy="79.692276"
+     r="0.26458332" />
 
-       
+    
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="stair-3f-c"
+     class="stairs"
+     data-name="stair-c"
+     cx="57.672466"
+     cy="70.962784"
+     r="0.26458332" />
+
+      <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+      id="hallway-3f99"
+     class="hallway"
+     data-room-id="room-3f99"
+     cx="57.672466"
+     cy="79.692276"
+     r="0.26458332" />
+
+    <circle
+     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-3f83"
+     class="hallway"
+     data-room-id="room-3f83"
+     cx="59.02206"
+     cy="79.692276"
+     r="0.26458332" />  
        
        
        
@@ -2056,16 +2157,6 @@ display="none"
      id="circle164"
      cx="66.53096"
      cy="16.258736"
-     r="0.26458332" /><circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="circle168"
-     cx="83.519547"
-     cy="36.257515"
-     r="0.26458332" /><circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="circle169"
-     cx="86.978912"
-     cy="36.257515"
      r="0.26458332" /><circle
      style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
      id="circle173"
@@ -2146,41 +2237,6 @@ display="none"
      id="circle209"
      cx="14.23339"
      cy="41.225739"
-     r="0.26458332" /><circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="circle212"
-     cx="6.9333129"
-     cy="36.594177"
-     r="0.26458332" /><circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="circle214"
-     cx="35.946346"
-     cy="79.692276"
-     r="0.26458332" /><circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="circle215"
-     cx="35.946346"
-     cy="71.962784"
-     r="0.26458332" /><circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="circle216"
-     cx="35.210205"
-     cy="71.226639"
-     r="0.26458332" /><circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="circle217"
-     cx="57.672466"
-     cy="79.692276"
-     r="0.26458332" /><circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="circle218"
-     cx="57.672466"
-     cy="71.962784"
-     r="0.26458332" /><circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="circle219"
-     cx="58.46003"
-     cy="71.226639"
      r="0.26458332" />
      
      

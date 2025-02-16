@@ -14,7 +14,7 @@
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #959595;
-}   
+}
 body {
     height: 100vh;
     background: linear-gradient(
@@ -130,19 +130,29 @@ body {
     font-size: 25px;
     margin-top: 5px;
 }
-.content a {
+.content a,
+.content button {
     background-color: #10b6d7;
     border: 1px solid black;
     border-radius: 10px;
-    width: 7%;
+    width: 5vw;
     text-align: center;
     padding-top: 8px;
     font-weight: 700;
     color: white;
     font-size: 16px;
+    margin-left: 10px;
 }
-.content a:hover {
+.content .disable {
+    background-color: #7c0a0d;
+}
+.content .enable {
+    background-color: #1c8217;
+}
+.content a:hover,
+.content button:hover {
     border: 1px solid black;
+    background-color: white;
 }
 .header {
     text-align: center;

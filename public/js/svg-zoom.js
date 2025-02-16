@@ -1,144 +1,148 @@
-const container = document.getElementById("svg-container");
+// (function () {
+//     // Select all SVG elements inside the container.
+//     const svgElements = document.querySelectorAll("#svg-container svg");
 
-if (!container) {
-    console.error("Container not found.");
-} else {
-    const svg = container.querySelector("svg");
-    if (!svg) {
-        console.error("SVG not found in the loaded content.");
-    } else {
-        let viewBox = { x: 0, y: 0, width: 1000, height: 1000 }; // Default values
-        const originalViewBox = svg.getAttribute("viewBox") || "0 0 1000 1000";
-        [viewBox.x, viewBox.y, viewBox.width, viewBox.height] = originalViewBox
-            .split(" ")
-            .map(Number);
+//     // Transform state: translation (offset) and scale.
+//     let offsetX = 0,
+//         offsetY = 0,
+//         scale = 1;
+//     let isDragging = false;
+//     let startX, startY;
 
-        let isDragging = false;
-        let startPoint = { x: 0, y: 0 };
-        let initialDistance = 0;
-        let initialViewBox = { ...viewBox };
+//     // For pinch zooming
+//     let initialPinchDistance = null;
+//     let initialScale = scale;
+//     let initialOffsetX = offsetX,
+//         initialOffsetY = offsetY;
 
-        const updateViewBox = () => {
-            svg.setAttribute(
-                "viewBox",
-                `${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`
-            );
-        };
+//     // Update the transform for each SVG element.
+//     function updateSVGTransform() {
+//         svgElements.forEach((svg) => {
+//             svg.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+//         });
+//     }
 
-        const getTouchPoint = (event) => {
-            const touch = event.touches[0];
-            return { x: touch.clientX, y: touch.clientY };
-        };
+//     // Use the container as the event target.
+//     const container = document.getElementById("svg-container");
 
-        const getDistance = (touch1, touch2) => {
-            const dx = touch2.clientX - touch1.clientX;
-            const dy = touch2.clientY - touch1.clientY;
-            return Math.sqrt(dx * dx + dy * dy);
-        };
+//     // ----------------------
+//     // Mouse Events (Desktop)
+//     // ----------------------
+//     container.addEventListener("mousedown", (e) => {
+//         isDragging = true;
+//         startX = e.clientX;
+//         startY = e.clientY;
+//     });
 
-        // Dragging with mouse
-        svg.addEventListener("mousedown", (event) => {
-            isDragging = true;
-            startPoint = { x: event.clientX, y: event.clientY };
-        });
+//     container.addEventListener("mousemove", (e) => {
+//         if (!isDragging) return;
+//         const dx = e.clientX - startX;
+//         const dy = e.clientY - startY;
+//         offsetX += dx;
+//         offsetY += dy;
+//         startX = e.clientX;
+//         startY = e.clientY;
+//         updateSVGTransform();
+//     });
 
-        svg.addEventListener("mousemove", (event) => {
-            if (isDragging) {
-                const dx =
-                    (startPoint.x - event.clientX) *
-                    (viewBox.width / svg.clientWidth);
-                const dy =
-                    (startPoint.y - event.clientY) *
-                    (viewBox.height / svg.clientHeight);
-                viewBox.x += dx;
-                viewBox.y += dy;
-                startPoint = { x: event.clientX, y: event.clientY };
-                updateViewBox();
-            }
-        });
+//     container.addEventListener("mouseup", () => {
+//         isDragging = false;
+//     });
 
-        svg.addEventListener("mouseup", () => {
-            isDragging = false;
-        });
+//     container.addEventListener("mouseleave", () => {
+//         isDragging = false;
+//     });
 
-        svg.addEventListener("mouseleave", () => {
-            isDragging = false;
-        });
+//     // Zooming with the mouse wheel
+//     container.addEventListener("wheel", (e) => {
+//         e.preventDefault(); // Prevent page scrolling
 
-        // Mouse wheel zoom
-        svg.addEventListener("wheel", (event) => {
-            event.preventDefault();
-            const zoomFactor = 1.1;
-            const { clientX, clientY, deltaY } = event;
-            const zoomIn = deltaY < 0;
-            const zoomCenterX =
-                (clientX / svg.clientWidth) * viewBox.width + viewBox.x;
-            const zoomCenterY =
-                (clientY / svg.clientHeight) * viewBox.height + viewBox.y;
+//         const rect = container.getBoundingClientRect();
+//         // Get pointer coordinates relative to the container
+//         const pointerX = e.clientX - rect.left;
+//         const pointerY = e.clientY - rect.top;
 
-            if (zoomIn) {
-                viewBox.width /= zoomFactor;
-                viewBox.height /= zoomFactor;
-            } else {
-                viewBox.width *= zoomFactor;
-                viewBox.height *= zoomFactor;
-            }
+//         // Choose zoom factor: wheel up to zoom in, down to zoom out.
+//         const zoomFactor = e.deltaY < 0 ? 1.1 : 0.9;
+//         const newScale = scale * zoomFactor;
 
-            viewBox.x =
-                zoomCenterX - (clientX / svg.clientWidth) * viewBox.width;
-            viewBox.y =
-                zoomCenterY - (clientY / svg.clientHeight) * viewBox.height;
+//         // Adjust offsets so that the pointer stays fixed during zoom.
+//         offsetX = pointerX - (newScale / scale) * (pointerX - offsetX);
+//         offsetY = pointerY - (newScale / scale) * (pointerY - offsetY);
+//         scale = newScale;
+//         updateSVGTransform();
+//     });
 
-            updateViewBox();
-        });
+//     // ----------------------
+//     // Touch Events (Mobile)
+//     // ----------------------
+//     container.addEventListener("touchstart", (e) => {
+//         if (e.touches.length === 1) {
+//             // Single-finger touch for dragging.
+//             isDragging = true;
+//             startX = e.touches[0].clientX;
+//             startY = e.touches[0].clientY;
+//         } else if (e.touches.length === 2) {
+//             // Two-finger touch for pinch zoom.
+//             isDragging = false;
+//             initialPinchDistance = getDistance(e.touches[0], e.touches[1]);
+//             initialScale = scale;
+//             initialOffsetX = offsetX;
+//             initialOffsetY = offsetY;
+//         }
+//     });
 
-        // Touch dragging and pinch-to-zoom
-        svg.addEventListener("touchstart", (event) => {
-            if (event.touches.length === 1) {
-                isDragging = true;
-                startPoint = getTouchPoint(event);
-            } else if (event.touches.length === 2) {
-                isDragging = false;
-                initialDistance = getDistance(
-                    event.touches[0],
-                    event.touches[1]
-                );
-                initialViewBox = { ...viewBox };
-            }
-        });
+//     container.addEventListener("touchmove", (e) => {
+//         e.preventDefault(); // Prevent native scrolling and zooming
 
-        svg.addEventListener("touchmove", (event) => {
-            event.preventDefault();
-            if (event.touches.length === 1 && isDragging) {
-                const touchPoint = getTouchPoint(event);
-                const dx =
-                    (startPoint.x - touchPoint.x) *
-                    (viewBox.width / svg.clientWidth);
-                const dy =
-                    (startPoint.y - touchPoint.y) *
-                    (viewBox.height / svg.clientHeight);
-                viewBox.x += dx;
-                viewBox.y += dy;
-                startPoint = touchPoint;
-                updateViewBox();
-            } else if (event.touches.length === 2) {
-                const newDistance = getDistance(
-                    event.touches[0],
-                    event.touches[1]
-                );
-                const zoomFactor = newDistance / initialDistance;
+//         if (e.touches.length === 1 && isDragging) {
+//             const dx = e.touches[0].clientX - startX;
+//             const dy = e.touches[0].clientY - startY;
+//             offsetX += dx;
+//             offsetY += dy;
+//             startX = e.touches[0].clientX;
+//             startY = e.touches[0].clientY;
+//             updateSVGTransform();
+//         } else if (e.touches.length === 2) {
+//             const currentDistance = getDistance(e.touches[0], e.touches[1]);
+//             if (!initialPinchDistance) return;
+//             const pinchScale = currentDistance / initialPinchDistance;
+//             const newScale = initialScale * pinchScale;
 
-                viewBox.width = initialViewBox.width / zoomFactor;
-                viewBox.height = initialViewBox.height / zoomFactor;
+//             // Calculate the midpoint (pinch center) relative to the container.
+//             const rect = container.getBoundingClientRect();
+//             const centerX =
+//                 (e.touches[0].clientX + e.touches[1].clientX) / 2 - rect.left;
+//             const centerY =
+//                 (e.touches[0].clientY + e.touches[1].clientY) / 2 - rect.top;
 
-                updateViewBox();
-            }
-        });
+//             offsetX =
+//                 centerX -
+//                 (newScale / initialScale) * (centerX - initialOffsetX);
+//             offsetY =
+//                 centerY -
+//                 (newScale / initialScale) * (centerY - initialOffsetY);
+//             scale = newScale;
+//             updateSVGTransform();
+//         }
+//     });
 
-        svg.addEventListener("touchend", () => {
-            isDragging = false;
-        });
+//     container.addEventListener("touchend", (e) => {
+//         if (e.touches.length < 2) {
+//             initialPinchDistance = null;
+//         }
+//         if (e.touches.length === 0) {
+//             isDragging = false;
+//         }
+//     });
 
-        updateViewBox();
-    }
-}
+//     // Helper function: calculate the distance between two touch points.
+//     function getDistance(touch1, touch2) {
+//         const dx = touch2.clientX - touch1.clientX;
+//         const dy = touch2.clientY - touch1.clientY;
+//         return Math.hypot(dx, dy);
+//     }
+
+//     // Initialize the transform on all SVG elements.
+//     updateSVGTransform();
+// })();

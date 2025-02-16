@@ -11,7 +11,7 @@ class AdminController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     public function dashboard()
     {
         return $this->showFloor('All Floors');
@@ -71,6 +71,30 @@ class AdminController extends Controller
             Rooms::where('id', $request->id)->update([
                 'room_name' => $request->name,
                 'room_desc' => $request->desc,
+            ]);
+            return redirect()->back()->with('success', 'Room updated successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Failed to update room');
+        }
+    }
+
+    public function enable(Request $request)
+    {
+        try {
+            Rooms::where('id', $request->id)->update([
+                'status' => 1,
+            ]);
+            return redirect()->back()->with('success', 'Room updated successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Failed to update room');
+        }
+    }
+
+    public function disable(Request $request)
+    {
+        try {
+            Rooms::where('id', $request->id)->update([
+                'status' => 0,
             ]);
             return redirect()->back()->with('success', 'Room updated successfully!');
         } catch (\Exception $e) {

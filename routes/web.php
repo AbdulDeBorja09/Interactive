@@ -8,7 +8,7 @@ use App\Http\Controllers\AdminController;
 Auth::routes();
 Route::get('/', [HomeController::class, 'map'])->name('map');
 
-Route::get('/get-room-info/{id}' , [HomeController::class, 'showinfo'])->name('showinfo');
+Route::get('/get-room-info/{id}', [HomeController::class, 'showinfo'])->name('showinfo');
 
 
 Route::middleware(['auth'])->group(function () {
@@ -22,4 +22,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/Fourth-floor', [AdminController::class, 'fourthFloor'])->name('fourth-floor');
 
     Route::post('/Admin/Edit/Submit', [AdminController::class, 'submitedit'])->name('submitedit');
+    Route::post('/Admin/Enable', [AdminController::class, 'enable'])->name('enable');
+    Route::post('/Admin/Disable', [AdminController::class, 'disable'])->name('disable');
 });
