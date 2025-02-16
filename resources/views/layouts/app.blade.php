@@ -15,6 +15,8 @@
 </head>
 
 <body>
+    {{-- Screen-loader --}}
+    @include('layouts.components.loader')
 
     {{-- Navbar with logo --}}
     <nav>
@@ -30,7 +32,7 @@
     @include('layouts.components.floatings')
     @include('layouts.components.bottom')
     @include('layouts.components.popup')
-    @include('layouts.components.loader')
+
 
 
     {{-- scripts --}}

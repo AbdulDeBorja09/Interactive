@@ -1257,38 +1257,19 @@
      
     
 
-     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-gf55"
-      data-room-id="room-gf55"
-     class="hallway"
-     cx="21.291197"
-     cy="63.603439"
-     rx="0.26458335"
-     ry="0.23345588" />
 
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf02"
       data-room-id="room-gf02"
      class="hallway"
-     cx="19.594595"
-     cy="65.212715"
-     rx="0.26458335"
-     ry="0.23345588" />
-
-     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-gf72"
-      data-room-id="room-gf72"
-     class="hallway"
-     cx="21.291197"
+      cx="21.291197"
      cy="63.603439"
      rx="0.26458335"
      ry="0.23345588" />
 
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf56"
       data-room-id="room-gf56"
      class="hallway"
@@ -1298,7 +1279,7 @@
      ry="0.23345588" />
 
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf57"
       data-room-id="room-gf57"
      class="hallway"
@@ -1308,7 +1289,7 @@
      ry="0.23345588" />
 
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf58"
       data-room-id="room-gf58"
      class="hallway"
@@ -1318,7 +1299,7 @@
      ry="0.23345588" />
 
       <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf80"
       data-room-id="room-gf80"
      class="hallway"
@@ -1328,7 +1309,7 @@
      ry="0.23345588" />
 
     <ellipse
-    style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+    style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
     id="stair-gf-a"
      class="stairs"
      data-name="stair-a"
@@ -1338,7 +1319,7 @@
     ry="0.23345588" />
 
       <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf80"
       data-room-id="room-gf81"
      class="hallway"
@@ -1350,7 +1331,7 @@
 
 
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf59"
       data-room-id="room-gf59"
      class="hallway"
@@ -1359,38 +1340,19 @@
      rx="0.26458335"
      ry="0.23345588" />
 
-    <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-gf60"
-      data-room-id="room-gf60"
+     <ellipse
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
+    id="hallway-gf05"
+      data-room-id="room-gf05"
      class="hallway"
      cx="25.592871"
      cy="20.902821"
      rx="0.26458335"
-     ry="0.23345588" />
-
-     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-    id="hallway-gf05"
-      data-room-id="room-gf05"
-     class="hallway"
-     cx="24.195669"
-     cy="19.630369"
-     rx="0.26458335"
      ry="0.23345588" /> 
 
-     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-gf61"
-      data-room-id="room-gf61"
-     class="hallway"
-     cx="33.743629"
-     cy="12.749919"
-     rx="0.26458335"
-     ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf62"
       data-room-id="room-gf62"
      class="hallway"
@@ -1400,7 +1362,7 @@
      ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf63"
       data-room-id="room-gf63"
      class="hallway"
@@ -1409,28 +1371,19 @@
      rx="0.26458335"
      ry="0.23345588" />
 
+
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-gf64"
-      data-room-id="room-gf64"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf09"
+      data-room-id="room-gf09"
      class="hallway"
-     cx="73.462784"
+      cx="73.462784"
      cy="24.328459"
      rx="0.26458335"
      ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-gf09"
-      data-room-id="room-gf09"
-     class="hallway"
-     cx="74.360985"
-     cy="23.467682"
-     rx="0.26458335"
-     ry="0.23345588" />
-
-    <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf65"
       data-room-id="room-gf65"
      class="hallway"
@@ -1440,7 +1393,7 @@
      ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf66"
       data-room-id="room-gf66"
      class="hallway"
@@ -1450,7 +1403,7 @@
      ry="0.23345588" />
 
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
     id="stair-gf-d"
      class="stairs"
      data-name="stair-d"
@@ -1460,7 +1413,7 @@
      ry="0.23345588" />
     
       <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf82"
       data-room-id="room-gf82"
      class="hallway"
@@ -1470,7 +1423,7 @@
      ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
        id="hallway-gf67"
       data-room-id="room-gf67"
      class="hallway"
@@ -1480,7 +1433,7 @@
      ry="0.23345588" />
 
       <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf12a"
       data-room-id="room-gf12a"
      class="hallway"
@@ -1490,7 +1443,7 @@
      ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf12b"
       data-room-id="room-gf12b"
      class="hallway"
@@ -1500,7 +1453,7 @@
      ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf13"
       data-room-id="room-gf13"
      class="hallway"
@@ -1510,7 +1463,7 @@
      ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf68"
       data-room-id="room-gf68"
      class="hallway"
@@ -1520,7 +1473,7 @@
      ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf98"
       data-room-id="room-gf98"
      class="hallway"
@@ -1531,7 +1484,7 @@
      
 
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="stair-gf-c"
      class="stairs"
      data-name="stair-c"
@@ -1541,7 +1494,7 @@
      ry="0.23345588" />
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf69"
       data-room-id="room-gf69"
      class="hallway"
@@ -1553,7 +1506,7 @@
      
 
     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
     id="hallway-gf50"
      data-room-id="room-gf50"
      class="hallway"
@@ -1564,7 +1517,7 @@
 
      
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="stair-gf-b"
      class="stairs"
      data-name="stair-b"
@@ -1574,7 +1527,7 @@
      ry="0.23345588" />
 
        <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
     id="hallway-gf85"
      data-room-id="room-gf85"
      class="hallway"
@@ -1584,7 +1537,7 @@
      ry="0.23345588" />
 
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf51"
      data-room-id="room-gf51"
      class="hallway"
@@ -1594,38 +1547,18 @@
      ry="0.23345588" />
 
 
-     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-gf53"
-     data-room-id="room-gf53"
-     class="hallway"
-     cx="30.041796"
-     cy="72.318756"
-     rx="0.26458335"
-     ry="0.23345588" />
      
      <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-gf01"
       data-room-id="room-gf01"
      class="hallway"
-     cx="28.383415"
-     cy="74.091812"
-     rx="0.26458335"
-     ry="0.23345588" />
-
-
-
-     
-     <ellipse
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-gf54"
-     data-room-id="room-gf54"
-     class="hallway"
-     cx="30.041796"
+      cx="30.041796"
      cy="72.318756"
      rx="0.26458335"
      ry="0.23345588" />
+
+
          
      <path id="route-path" stroke="#3483cb" stroke-width="1" fill="none" class="directions" stroke-linejoin="round"></path>
     

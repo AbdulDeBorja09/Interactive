@@ -32,9 +32,9 @@ document.querySelectorAll("ul li a").forEach((button) => {
 });
 
 window.onload = function () {
-    document.getElementById("3F").style.display = "block";
+    document.getElementById("LG").style.display = "block";
     document
-        .querySelector('ul li a[data-floor="3F"]')
+        .querySelector('ul li a[data-floor="LG"]')
         .parentElement.classList.add("active");
     document.getElementById("floor-title").innerText = "Lower Ground";
 };

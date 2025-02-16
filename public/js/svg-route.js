@@ -302,7 +302,7 @@ function findClosestStair(roomId, stairs, svg) {
         let stairId = stair.getAttribute("data-name");
         if (!stairId) return;
         let distance = calculateDistance(room, stair);
-        console.log("Stair:", stairId, "Distance:", distance);
+        // console.log("Stair:", stairId, "Distance:", distance);
         if (distance < minDistance) {
             minDistance = distance;
             closestStair = stairId;
@@ -373,7 +373,7 @@ function drawPath(svg, path) {
                 console.warn("Coordinates not found for roomId:", roomId);
                 return null;
             }
-            console.log(`Room ${roomId}: x=${coords.x}, y=${coords.y}`);
+            // console.log(`Room ${roomId}: x=${coords.x}, y=${coords.y}`);
             return `${coords.x},${coords.y}`;
         })
         .filter((coordString) => coordString !== null);

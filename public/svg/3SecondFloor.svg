@@ -1085,8 +1085,17 @@ display="none"
        x="94.233566"
        y="49.735428">2F16</tspan></text>
 
+  <!-- <circle
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-2f08"
+     class="hallway"
+     data-room-id="room-2f10a"
+     cx="24.761683"
+     cy="43.205132"
+     r="0.26458332" /> -->
+       
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f10a"
      class="hallway"
      data-room-id="room-2f10a"
@@ -1095,7 +1104,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f54"
      class="hallway"
      data-room-id="room-2f54"
@@ -1104,7 +1113,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
     id="hallway-2f13"
      class="hallway"
      data-room-id="room-2f13"
@@ -1113,7 +1122,7 @@ display="none"
      r="0.26458332" />
 
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f55"
      class="hallway"
      data-room-id="room-2f55"
@@ -1122,7 +1131,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f56"
      class="hallway"
      data-room-id="room-2f56"
@@ -1131,7 +1140,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f57"
      class="hallway"
      data-room-id="room-2f57"
@@ -1140,7 +1149,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f58"
      class="hallway"
      data-room-id="room-2f58"
@@ -1149,7 +1158,7 @@ display="none"
      r="0.26458332" />
      
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f14"
      class="hallway"
      data-room-id="room-2f14"
@@ -1158,7 +1167,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f59"
      class="hallway"
      data-room-id="room-2f59"
@@ -1167,7 +1176,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f60"
      class="hallway"
      data-room-id="room-2f60"
@@ -1176,7 +1185,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="stair-2f-d"
     class="stairs"
      data-name="stair-d"
@@ -1185,7 +1194,7 @@ display="none"
      r="0.26458332" />
      
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f61"
      class="hallway"
      data-room-id="room-2f61"
@@ -1194,7 +1203,7 @@ display="none"
      r="0.26458332" />
      
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f16"
      class="hallway"
      data-room-id="room-2f16"
@@ -1203,7 +1212,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f17"
      class="hallway"
      data-room-id="room-2f17"
@@ -1212,7 +1221,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f62"
      class="hallway"
      data-room-id="room-2f62"
@@ -1221,7 +1230,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f63"
      class="hallway"
      data-room-id="room-2f63"
@@ -1230,7 +1239,7 @@ display="none"
      r="0.26458332" />
      
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f64"
      class="hallway"
      data-room-id="room-2f64"
@@ -1239,7 +1248,7 @@ display="none"
      r="0.26458332" />
      
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f19"
      class="hallway"
      data-room-id="room-2f19"
@@ -1248,7 +1257,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f20"
      class="hallway"
      data-room-id="room-2f20"
@@ -1257,7 +1266,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f65"
      class="hallway"
      data-room-id="room-2f65"
@@ -1266,7 +1275,7 @@ display="none"
      r="0.26458332" />
 
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f77"
      class="hallway"
      data-room-id="room-2f77"
@@ -1275,7 +1284,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="stair-2f-c"
     class="stairs"
      data-name="stair-c"
@@ -1284,7 +1293,7 @@ display="none"
      r="0.26458332" />
 
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f95"
      class="hallway"
      data-room-id="room-2f95"
@@ -1293,7 +1302,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f79"
      class="hallway"
      data-room-id="room-2f79"
@@ -1302,7 +1311,7 @@ display="none"
      r="0.26458332" /> 
 
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
     id="stair-2f-b"
      class="stairs"
      data-name="stair-b"
@@ -1311,7 +1320,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f80"
      class="hallway"
      data-room-id="room-2f80"
@@ -1320,7 +1329,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f66"
      class="hallway"
      data-room-id="room-2f66"
@@ -1329,7 +1338,7 @@ display="none"
      r="0.26458332" />
    
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f01"
      class="hallway"
      data-room-id="room-2f01"
@@ -1338,7 +1347,7 @@ display="none"
      r="0.26458332" />
       
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f02"
      class="hallway"
      data-room-id="room-2f02"
@@ -1347,7 +1356,7 @@ display="none"
      r="0.26458332" />
        
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f02"
      class="hallway"
      data-room-id="room-2f03"
@@ -1356,7 +1365,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f50"
      class="hallway"
      data-room-id="room-2f50"
@@ -1365,7 +1374,7 @@ display="none"
      r="0.26458332" />
 
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f51"
      class="hallway"
      data-room-id="room-2f51"
@@ -1374,7 +1383,7 @@ display="none"
      r="0.26458332" />
 
       <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f52"
      class="hallway"
      data-room-id="room-2f52"
@@ -1383,7 +1392,7 @@ display="none"
      r="0.26458332" />
 
       <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f05a"
      class="hallway"
      data-room-id="room-2f05a"
@@ -1392,7 +1401,7 @@ display="none"
      r="0.26458332" />
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f05b"
      class="hallway"
      data-room-id="room-2f05b"
@@ -1401,7 +1410,7 @@ display="none"
      r="0.26458332" />
 
       <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="hallway-2f53"
      class="hallway"
      data-room-id="room-2f53"
@@ -1411,7 +1420,7 @@ display="none"
 
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
       id="stair-2f-a"
     class="stairs"
      data-name="stair-a"
@@ -1421,7 +1430,7 @@ display="none"
 
 
     <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f07"
      class="hallway"
      data-room-id="room-2f07"
@@ -1430,21 +1439,22 @@ display="none"
      r="0.26458332" />
 
      <circle
-     style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-2f08"
      class="hallway"
      data-room-id="room-2f08"
      cx="24.761683"
      cy="43.205132"
      r="0.26458332" />
+     
 
-       
-
-
-
+     
 
 
-       <circle
+
+
+
+       <!-- <circle
      style="fill:#000000;stroke-width:1;paint-order:stroke markers fill"
      id="circle100"
      cx="46.17799"
@@ -1545,7 +1555,7 @@ display="none"
      id="circle152"
      cx="23.842474"
      cy="48.455524"
-     r="0.26458332" />
+     r="0.26458332" /> -->
      
      <path id="route-path" stroke="#3483cb" stroke-width="1" fill="none" class="directions" stroke-linejoin="round"></path>
      
