@@ -145,27 +145,36 @@ nav img {
     display: flex;
     height: 30vh;
     top: 150px;
+    left: -35rem;
     min-height: 100px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+}
+.floor-room-list.open {
+    left: 0px;
 }
 .floor-room-list div:first-child {
-    position: absolute;
     min-height: 100px;
-    left: -34rem;
     height: 30vh;
     background-color: white;
     overflow-y: auto;
+    cursor: grab;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+.floor-room-list div:first-child.active {
+    cursor: grabbing;
 }
 .floor-room-list div p {
-    border-bottom: 1px solid #d1d1d1;
-    font-size: 13px;
-    width: 27vw;
+    font-size: 14px;
+    width: 34rem;
     text-align: center;
     position: relative;
-    border: 1px solid #616161;
+    border: 1px solid #9c9c9c;
     margin: 5px;
+    padding: 5px;
     border-radius: 3px;
     font-weight: 500;
 }
@@ -387,7 +396,7 @@ svg {
     cursor: pointer;
 }
 .room:hover {
-    fill: #217ace;
+    fill: hsl(113, 43%, 44%);
 }
 .directions {
     stroke-dasharray: 1000;
@@ -461,6 +470,19 @@ svg {
 .end-point {
     animation: blinkEnd 1s infinite;
 }
+.blink-point {
+    animation: BlinkPoint 1s infinite;
+}
+
+@keyframes BlinkPoint {
+    0%,
+    100% {
+        fill: hsl(113, 43%, 44%);
+    }
+    50% {
+        fill: #898989;
+    }
+}
 
 @keyframes blinkStart {
     0%,
@@ -492,7 +514,10 @@ svg {
         margin: 20px 7px 10px 7px;
     }
     .floor-room-list div p {
-        width: 40vw;
+        width: 85vw;
+    }
+    .floor-room-list {
+        left: -90vw;
     }
 }
 @keyframes draw {

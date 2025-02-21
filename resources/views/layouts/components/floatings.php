@@ -3,9 +3,8 @@
 </section>
 <section id="roomlistbox" class="floor-room-list">
     <div class="div" id="room-list">
-
     </div>
-    <div class="room-handle">
+    <div class="room-handle" id="dragger">
         <h1>Offices</h1>
     </div>
 </section>

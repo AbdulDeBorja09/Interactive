@@ -17,7 +17,6 @@
             <div class="mb-3">
                 <input type="text" id="searchInput" class="form-control w-25" placeholder="Search for office...">
             </div>
-
             <div class="table-responsive">
                 <table class="table table-bordered  table-hover">
                     <thead class="custom-thead">
@@ -57,62 +56,8 @@
                 </table>
             </div>
         </div>
-
-
-
     </div>
-
-
 </section>
-<script>
-    window.onload = function() {
-        const boxes = document.querySelectorAll('svg');
-        boxes.forEach(function(box) {
-            box.style.display = 'block';
-        });
-    };
-</script>
-<script>
-    const searchInput = document.getElementById('searchInput');
-    searchInput.addEventListener('input', function () {
-        const filter = searchInput.value.toUpperCase();
-        const table = document.querySelector('.table');
-        const rows = table.getElementsByTagName('tr');
-        
-        let found = false;
-        for (let i = 1; i < rows.length; i++) {
-            const cells = rows[i].getElementsByTagName('td');
-            let rowMatch = false;
-            for (let j = 0; j < cells.length; j++) {
-                if (cells[j] && cells[j].textContent.toUpperCase().includes(filter)) {
-                    rowMatch = true;
-                    break; 
-                }
-            }
-            if (rowMatch) {
-                rows[i].style.display = '';
-                found = true;
-            } else {
-                rows[i].style.display = 'none';
-            }
-        }
-
-       
-        const message = document.getElementById('noResultsMessage');
-        if (message) {
-            message.remove();
-        }
-
-        if (!found) {
-            const noResultsMessage = document.createElement('tr');
-            noResultsMessage.id = 'noResultsMessage';
-            noResultsMessage.innerHTML = `
-                <td colspan="5" class="text-center text-danger">No results found</td>
-            `;
-            table.querySelector('tbody').appendChild(noResultsMessage);
-        }
-    });
-</script>
-
+<script src="{{asset('../js/table-search.js')}}"></script>
 
 @endsection

@@ -8,9 +8,7 @@ use App\Http\Controllers\AdminController;
 Auth::routes();
 Route::get('/', [HomeController::class, 'map'])->name('map');
 Route::get('/GetInfo/{id}', [HomeController::class, 'showinfo'])->name('showinfo');
-
 Route::post('/GetRooms', [HomeController::class, 'getRooms']);
-
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/Admin/Dashboard', [AdminController::class, 'dashboard'])->name('dashboard');

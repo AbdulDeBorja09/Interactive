@@ -378,7 +378,7 @@ function animateCircle(svg, pathElement) {
     }
 
     const pathLength = pathElement.getTotalLength();
-    const speed = 13; // 5 seconds
+    const speed = 13;
     const zoomFactor = 0.5;
 
     const originalViewBox = svg.viewBox.baseVal;

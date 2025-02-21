@@ -84,6 +84,7 @@
 
     </div>
 </section>
+
 <div class="modal " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="floor-title" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-xl">
@@ -158,127 +159,7 @@
 </div>
 
 
-
-
-<script>
-    window.onload = function() {
-        const boxes = document.querySelectorAll('svg');
-        boxes.forEach(function(box) {
-            box.style.display = 'block';
-        });
-    };
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const floorMap = {
-            LG: { name: "Lower Ground", file: "1GroundFloor_final.svg" },
-            GF: { name: "Ground Floor", file: "2UpperGroundFloor.svg" },
-            "2F": { name: "Second Floor", file: "3SecondFloor.svg" },
-            "3F": { name: "Third Floor", file: "4ThirdFloor.svg" },
-            "4F": { name: "Fourth Floor", file: "5Fourth Floor.svg" }
-        };
-
-        function loadSvg(floor) {
-            const svgContainer = document.getElementById("svg-container");
-            svgContainer.innerHTML = ""; // Clear previous SVG
-
-            if (floorMap[floor]) {
-                fetch(`/svg/${floorMap[floor].file}`)
-                    .then(response => response.text())
-                    .then(svgContent => {
-                        svgContainer.innerHTML = svgContent; // Insert SVG
-
-                        // Remove 'display: none' from all elements inside the SVG
-                        const svgElement = svgContainer.querySelector("svg");
-                        if (svgElement) {
-                            svgElement.style.display = "block"; // Make the entire SVG visible
-
-                            // Remove 'display: none' from any hidden elements inside the SVG
-                            svgElement.querySelectorAll("[style*='display: none']").forEach(el => {
-                                el.style.display = "block";
-                            });
-                        }
-                    })
-                    .catch(error => console.error("Error loading SVG:", error));
-
-                document.getElementById("floor-title").innerText = floorMap[floor].name;
-            }
-        }
-
-        document.querySelectorAll("ul li a").forEach(button => {
-            button.addEventListener("click", function (event) {
-                event.preventDefault();
-
-                document.querySelectorAll("ul li").forEach(li => li.classList.remove("active"));
-                this.parentElement.classList.add("active");
-
-                const floor = this.getAttribute("data-floor");
-                loadSvg(floor);
-            });
-        });
-
-        
-        document.getElementById("staticBackdrop").addEventListener("shown.bs.modal", function () {
-            loadSvg("LG");
-        });
-        
-    });
-
-    window.onload = function () {
-    document
-        .querySelector('ul li a[data-floor="LG"]')
-        .parentElement.classList.add("active");
-    document.getElementById("floor-title").innerText = "Lower Ground";
-};
-
-</script>
-
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-    const roomId = "{{ $item->room_id }}"; 
-
-    function selectRoomById(roomId) {
-        const rooms = document.querySelectorAll('.room');
-        rooms.forEach((room) => {
-            if (room.id === roomId) {
-              
-                room.classList.add('selected');
-            } else {
-               
-                room.classList.remove('selected');
-            }
-        });
-    }
-    selectRoomById(roomId);
-});
-
-</script>
-<script>
-    function showRoomInfo(roomId) {
-        let swapButton = document.getElementById("swapButton");
-        swapButton.disabled = true;
-        swapButton.innerText = "Fetching...";
-
-        fetch(`/get-room-info/${roomId}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    document.getElementById("newRoomId").value = data.room.id;
-                    document.getElementById("newroomdisplay").value = data.room.location  + " (" + data.room.id.substring(5).toUpperCase() + ")";
-                    document.getElementById("newroomname").value = data.room.name;
-                } else {
-                    alert("Room information not found.");
-                }
-            })
-            .catch(error => console.error("Error fetching room info:", error))
-            .finally(() => {
-                // Re-enable the swap button
-                swapButton.disabled = false;
-                swapButton.innerText = "Swap Room";
-            });
-    }
-</script>
-
-
+<script src="{{asset('js/edit-changefloor.js')}}"></script>
+<script src="{{asset('js/ajax-room-info.js')}}"></script>
+<script src="{{asset('js/edit-blink.js')}}"></script>
 @endsection

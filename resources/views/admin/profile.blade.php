@@ -34,35 +34,6 @@
                 {!! file_get_contents(public_path('image/persons.svg')) !!}
             </div>
         </div>
-        {{-- <div class="table-responsive mt-5">
-            <table class="table table-bordered  table-hover">
-                <thead class="custom-thead">
-                    <tr style="border: 1px sol">
-                        <th class="text-center" style="background-color: #217ace; width: 70px">#</th>
-                        <th style="background-color: #217ace;">Name</th>
-                        <th style="background-color: #217ace;">Email</th>
-                        <th class="text-center" style="background-color: #217ace;">Status</th>
-                        <th class="text-center" style="background-color: #217ace;">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($profile as $item)
-                    <tr>
-                        <td class="text-center">{{$loop->iteration}}</td>
-                        <td>{{$item->name}}</td>
-                        <td>{{$item->email}}</td>
-                        <td class="text-center">
-                            @if ($item->status === 1)
-                            <span class="badge text-bg-success">Active</span>
-                            @else
-                            <span class="badge text-bg-success">Inactive</span>
-                            @endif
-                        </td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        </div> --}}
     </div>
 </section>
 @endsection

@@ -44,10 +44,9 @@ document.querySelectorAll(".select-btn").forEach(function (button) {
 function BlinkStart(roomId) {
   var rooms = document.querySelectorAll(".room");
   rooms.forEach(function (room) {
-    // Remove the 'start-point' class from all rooms
+    room.classList.remove("blink-point");
     room.classList.remove("start-point");
-  }); // Add the 'start-point' class to the selected room
-
+  });
   var startRoom = document.getElementById(roomId);
 
   if (startRoom) {
@@ -58,10 +57,9 @@ function BlinkStart(roomId) {
 function BlinkEnd(roomId) {
   var rooms = document.querySelectorAll(".room");
   rooms.forEach(function (room) {
-    // Remove the 'end-point' class from all rooms
+    room.classList.remove("blink-point");
     room.classList.remove("end-point");
-  }); // Add the 'end-point' class to the selected room
-
+  });
   var endRoom = document.getElementById(roomId);
 
   if (endRoom) {

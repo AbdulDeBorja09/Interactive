@@ -35,9 +35,9 @@ document.querySelectorAll("ul li a").forEach((button) => {
                     "Content-Type": "application/json",
                     "X-CSRF-TOKEN": document
                         .querySelector('meta[name="csrf-token"]')
-                        .getAttribute("content"), // Ensure you have a CSRF token for Laravel
+                        .getAttribute("content"),
                 },
-                body: JSON.stringify({ floor: floorMap[floor] }),
+                body: JSON.stringify({ floor: "Lower Ground" }),
             })
                 .then((response) => response.json())
                 .then((data) => {
@@ -49,6 +49,10 @@ document.querySelectorAll("ul li a").forEach((button) => {
                             const roomItem = document.createElement("p");
                             roomItem.classList.add("room-item");
                             roomItem.innerText = room.room_name;
+                            roomItem.dataset.BlinkID = room.room_id;
+                            roomItem.addEventListener("click", function () {
+                                BlinkRoom(this.dataset.BlinkID);
+                            });
                             roomList.appendChild(roomItem);
                         });
                     } else {
@@ -89,6 +93,10 @@ window.onload = function () {
                     const roomItem = document.createElement("p");
                     roomItem.classList.add("room-item");
                     roomItem.innerText = room.room_name;
+                    roomItem.dataset.BlinkID = room.room_id; // Store room_id in dataset
+                    roomItem.addEventListener("click", function () {
+                        BlinkRoom(this.dataset.BlinkID);
+                    });
                     roomList.appendChild(roomItem);
                 });
             } else {
@@ -96,45 +104,18 @@ window.onload = function () {
             }
         })
         .catch((error) => console.error("Error:", error));
+    function BlinkRoom(BlinkID) {
+        const sidebar = document.getElementById("roomlistbox");
+        sidebar.classList.remove("open");
+        var rooms = document.querySelectorAll(".room");
+        rooms.forEach(function (room) {
+            room.classList.remove("blink-point");
+        });
+
+        var startRoom = document.getElementById(BlinkID);
+
+        if (startRoom) {
+            startRoom.classList.add("blink-point");
+        }
+    }
 };
-document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.getElementById("room-list");
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    function startDrag(e) {
-        isDown = true;
-        slider.classList.add("active");
-        startX = e.touches
-            ? e.touches[0].pageX - slider.offsetLeft
-            : e.pageX - slider.offsetLeft;
-        scrollLeft = slider.scrollLeft;
-    }
-
-    function stopDrag() {
-        isDown = false;
-        slider.classList.remove("active");
-    }
-
-    function moveDrag(e) {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.touches
-            ? e.touches[0].pageX - slider.offsetLeft
-            : e.pageX - slider.offsetLeft;
-        const walk = (x - startX) * 2; // Adjust speed by changing multiplier
-        slider.scrollLeft = scrollLeft - walk;
-    }
-
-    // Mouse Events
-    slider.addEventListener("mousedown", startDrag);
-    slider.addEventListener("mouseleave", stopDrag);
-    slider.addEventListener("mouseup", stopDrag);
-    slider.addEventListener("mousemove", moveDrag);
-
-    // Touch Events (For Mobile)
-    slider.addEventListener("touchstart", startDrag);
-    slider.addEventListener("touchend", stopDrag);
-    slider.addEventListener("touchmove", moveDrag);
-});

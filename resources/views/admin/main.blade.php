@@ -88,13 +88,4 @@
     </div>
 
 </section>
-<script>
-    window.onload = function() {
-        const boxes = document.querySelectorAll('svg');
-        boxes.forEach(function(box) {
-            box.style.display = 'block';
-        });
-    };
-</script>
-
 @endsection
