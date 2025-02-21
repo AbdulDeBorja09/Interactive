@@ -1812,5 +1812,5 @@
      ry="0.23345588" />
  
      
-     <path id="route-path" stroke="#3483cb" stroke-width="1" fill="none" class="directions" stroke-linejoin="round"></path>
+     <path id="route-path" stroke="#217ace" stroke-width="1" fill="none" class="directions" stroke-linejoin="round"></path>
      </svg>

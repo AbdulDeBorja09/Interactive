@@ -12,9 +12,16 @@ class DatabaseSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name' => 'Test Adminn',
-                'email' => 'admin@com',
-                'password' => Hash::make("Password"),
+                'name' => 'Eric Pogi',
+                'email' => 'eric@admin.com',
+                'password' => Hash::make("ericpogi123"),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'name' => 'Calamba Admin',
+                'email' => 'admin@admin.com',
+                'password' => Hash::make("password123"),
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -258,16 +265,6 @@ class DatabaseSeeder extends Seeder
                 'room_id' => 'room-gf09',
                 'text_id' => 'text-gf09',
                 'room_name' => 'City Assessors Office',
-                'room_desc' => 'Description for Room',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-
-            [
-                'floor' => 'Ground Floor',
-                'room_id' => 'room-mopac',
-                'text_id' => 'text-mopac',
-                'room_name' => 'MOPAC (Mayor’s Office Public A Center)',
                 'room_desc' => 'Description for Room',
                 'created_at' => now(),
                 'updated_at' => now(),

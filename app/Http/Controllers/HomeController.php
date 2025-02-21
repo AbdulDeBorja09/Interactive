@@ -27,4 +27,11 @@ class HomeController extends Controller
             'room' => $room
         ]);
     }
+    public function getRooms(Request $request)
+    {
+        $floor = $request->floor;
+        $rooms = Rooms::where('floor', $floor)->get();
+
+        return response()->json(['rooms' => $rooms]);
+    }
 }

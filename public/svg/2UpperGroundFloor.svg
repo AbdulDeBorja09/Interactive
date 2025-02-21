@@ -1351,6 +1351,17 @@
      ry="0.23345588" /> 
 
 
+       <ellipse
+     style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
+     id="hallway-gf61"
+      data-room-id="room-gf61"
+     class="hallway"
+      cx="34.37299"
+      cy="12.749919"
+     rx="0.26458335"
+     ry="0.23345588" />
+
+
     <ellipse
      style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
      id="hallway-gf62"
@@ -1560,6 +1571,6 @@
 
 
          
-     <path id="route-path" stroke="#3483cb" stroke-width="1" fill="none" class="directions" stroke-linejoin="round"></path>
+     <path id="route-path" stroke="#217ace" stroke-width="1" fill="none" class="directions" stroke-linejoin="round"></path>
     
     </svg>

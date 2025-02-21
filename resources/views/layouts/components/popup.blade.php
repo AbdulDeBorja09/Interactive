@@ -3,6 +3,7 @@
         <div class="info">
             <h1 id="popup-title">Fetching Info</h1>
             <p id="popup-content">Loading...</p>
+            
         </div>
         <div class="buttons d-flex " style="justify-content: space-between">
             <button class="close-btn" onclick="closePopup()">Close</button>

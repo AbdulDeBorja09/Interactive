@@ -1,7 +1,7 @@
 function showRoomInfo(roomId) {
     closePopup();
     document.getElementById("room-popup").style.display = "block";
-    fetch(`/get-room-info/${roomId}`)
+    fetch(`/GetInfo/${roomId}`)
         .then((response) => response.json())
         .then((data) => {
             if (data.success) {
@@ -21,7 +21,7 @@ function showRoomInfo(roomId) {
                     document.getElementById("start-search").value =
                         data.room.room_name;
                     document.getElementById("start-hidden").value = roomId;
-
+                    BlinkStart(roomId);
                     checkAndDrawRoute();
                 };
 
@@ -30,7 +30,7 @@ function showRoomInfo(roomId) {
                     document.getElementById("end-search").value =
                         data.room.room_name;
                     document.getElementById("end-hidden").value = roomId;
-
+                    BlinkEnd(roomId);
                     checkAndDrawRoute();
                 };
             } else {

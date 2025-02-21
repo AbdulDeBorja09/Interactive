@@ -1,82 +1,284 @@
 @extends('admin.layout.app')
 
 @section('content')
-
-
+@include('admin.components.alert')
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="{{url('/Admin/Dashboard')}}">Home</a></li>
+            <li><a href="{{url('/Admin/Dashboard')}}">Floor List</a></li>
+            <li><a onclick="history.back()">Office List</a></li>
+            <li>Edit Office</li>
+        </ul>
+        <h1>Edit Office</h1>
+    </div>
+</div>
 <section class="main container">
-    <div class="error-container container">
-        @if(session('error'))
-        <div class="alert error-alert d-flex" role="alert" id="errorAlert">
-            <div>
-                <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                <b>Error!</b> {{ session('error') }}
+    <div class="rooms-container shadow-sm">
+        <a class="back-btn" onclick="history.back()"><i class=" fa-solid fa-arrow-left-long"></i></a>
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 edit-form">
+                <form action="{{route('submitedit')}}" method="POST">
+                    @csrf
+                    @php
+                    $roomID = strtoupper(str_replace('room-', '', $item->room_id));
+                    @endphp
+                    <input type="hidden" name="id" value="{{$item->id}}">
+                    <div class="mt-3">
+                        <label for="office">Office Name:</label>
+                        <input class="form-control" type="text" name="name" id="office" value="{{$item->room_name}}"
+                            required>
+                    </div>
+                    <div class="mt-3">
+                        <label for="floor">Floor:</label>
+                        <input class="form-control" type="text" name="" id="floor"
+                            value="{{$item->floor}} ({{$roomID}})" disabled>
+                    </div>
+                    <div class="mt-3">
+                        <label for="dept">Dept. Head:</label>
+                        <input class="form-control" type="text" name="head" id="dept" value="{{$item->room_head}}">
+                    </div>
+                    <div class="mt-3">
+                        <label for="contact">Office Contact:</label>
+                        <input class="form-control" type="text" name="contact" id="contact"
+                            value="{{$item->room_contact}}">
+                    </div>
+                    <div class="mt-3">
+                        <label for="email">Office Email:</label>
+                        <input class="form-control" type="email" name="email" id="email" value="{{$item->room_email}}">
+                    </div>
+                    <div class="mt-3">
+                        <label for="status">Room Status:</label>
+                        <select class="form-control" name="status" id="status">
+                            <option value="0" @selected($item->status == 0)>Disable</option>
+                            <option value="1" @selected($item->status == 1)>Active</option>
+                        </select>
+
+                    </div>
+                    <div class="mt-3">
+                        <label for="desc">Room Description:</label>
+                        <textarea class="form-control" name="desc" rows="5" id="desc"
+                            required>{{$item->room_desc}}</textarea>
+                    </div>
+                    <button class="btn">Save Edit</button>
+                </form>
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                    Swap Room
+                </button>
             </div>
-            <button type="button" class="btn-close" onclick="closeAlert(this)" aria-label="Closes"></button>
+            <div class="col-lg-6 col-md-12 col-sm-12 edit-svg">
+                @if ($item->floor === "Lower Ground")
+                {!! file_get_contents(public_path('svg/1GroundFloor_final.svg')) !!}
+                @elseif($item->floor === "Ground Floor")
+                {!! file_get_contents(public_path('svg/2UpperGroundFloor.svg')) !!}
+                @elseif($item->floor === "Second Floor")
+                {!! file_get_contents(public_path('svg/3SecondFloor.svg')) !!}
+                @elseif($item->floor === "Third Floor")
+                {!! file_get_contents(public_path('svg/4ThirdFloor.svg')) !!}
+                @elseif($item->floor === "Fourth Floor")
+                {!! file_get_contents(public_path('svg/5Fourth Floor.svg')) !!}
+                @endif
+            </div>
         </div>
-        @endif
 
-        @if(session('success'))
-        <div class="alert success-alert  fade show d-flex align-items-center w-100" role="alert" id="successAlert">
-            <div>
-                <i class="bi bi-exclamation-triangle-fill me-2"></i>
-                <b>Success!</b> {{ session('success') }}
-            </div>
-            <button type="button" class="btn-close" onclick="closeAlert(this)" aria-label="Close"></button>
-        </div>
-        @endif
-    </div>
-    <script>
-        function closeAlert(button) {
-            let alertElement = button.closest('.alert'); 
-            if (alertElement) {
-                alertElement.style.transition = "opacity 0.5s, transform 0.5s";
-                alertElement.style.opacity = "0";
-                alertElement.style.transform = "translateY(-20px)";
-                setTimeout(() => {
-                    alertElement.style.display = "none";
-                }, 500);
-            }
-        }
-    </script>
-    <div class="edit-return">
-        <a href="{{route('dashboard')}}" class="back-button ">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke="currentColor"
-                stroke-width="2" viewBox="0 0 24 24" class="feather feather-arrow-left">
-                <path d="M19 12H5m7-7l-7 7 7 7"></path>
-            </svg>
-            <b>Return</b>
-        </a>
-    </div>
-    <div class="edit-container ">
-
-        <form action="{{route('submitedit')}}" method="POST">
-            @csrf
-            <input type="hidden" name="id" value="{{$item->id}}">
-            <div class="row">
-                <div class="col-lg-5">
-                    <h1>Office Name:</h1>
-                </div>
-
-                <div class="col-lg-7"><input class="w-100" type="text" name="name" value="{{$item->room_name}}">
-                </div>
-                <div class="col-lg-5">
-                    <h1>Location:</h1>
-                </div>
-                <div class="col-lg-7"><input class="w-100" type="text" value="{{$item->floor}}" readonly>
-                </div>
-
-                <div class="col-lg-12">
-                    <h1>Project Description:</h1>
-                </div>
-                <div class="col-lg-12"><textarea class="w-100" cols="30" type="text"
-                        name="desc"> {{$item->room_desc}}</textarea></div>
-            </div>
-            <div class="text-center">
-                <button class="w-25">Save Edit</button>
-            </div>
-        </form>
     </div>
 </section>
+<div class="modal " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="floor-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <form action="{{route('swapRooms')}}" method="POST">
+                @csrf
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="floor-title">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body ">
+                    <div>
+                        <div class="row">
+                            <div class="col-lg-5">
+
+                                <div class="form-container">
+                                    <label for="displayvalue">Current Location</label>
+                                    <input type="text" name="oldRoomId" id="oldroomid" value="{{$item->room_id}}"
+                                        hidden>
+                                    <input class="form-control" id="oldroomdisplay" type="text"
+                                        value=" {{$item->floor}} ({{$roomID}})" readonly>
+                                    <label for="oldroomname">Room Name:</label>
+                                    <textarea class="w-100 form-control" type="text" name="oldroomname" id="oldroomname"
+                                        rows="2" readonly>{{$item->room_name}}</textarea>
+                                    <hr>
+                                    <label for="newroomid">New Location</label>
+                                    <input type="hidden" name="newRoomId" id="newRoomId" value="">
+                                    <input class="form-control" id="newroomdisplay" type="text" value=" " readonly>
+                                    <label for="newroomname">Room Name:</label>
+                                    <textarea class="w-100 form-control" type="text" name="newroomname" id="newroomname"
+                                        rows="2" readonly></textarea>
+                                </div>
+                                <section class="floors">
+                                    <ul>
+                                        <li><a href="#" data-floor="4F">4F</a></li>
+                                        <li><a href="#" data-floor="3F">3F</a></li>
+                                        <li><a href="#" data-floor="2F">2F</a></li>
+                                        <li><a href="#" data-floor="GF">GF</a></li>
+                                        <li><a href="#" data-floor="LG">LG</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                            <div class="col-lg-7">
+                                <div id="svg-container">
+                                    <div id="LG" class="floor-svg" style="display: none;">
+                                        {!! file_get_contents(public_path('svg/1GroundFloor_final.svg')) !!}
+                                    </div>
+                                    <div id="GF" class="floor-svg" style="display: none;">
+                                        {!! file_get_contents(public_path('svg/2UpperGroundFloor.svg')) !!}
+                                    </div>
+                                    <div id="2F" class="floor-svg" style="display: none;">
+                                        {!! file_get_contents(public_path('svg/3SecondFloor.svg')) !!}
+                                    </div>
+                                    <div id="3F" class="floor-svg" style="display: none;">
+                                        {!! file_get_contents(public_path('svg/4ThirdFloor.svg')) !!}
+                                    </div>
+                                    <div id="4F" class="floor-svg" style="display: none;">
+                                        {!! file_get_contents(public_path('svg/5Fourth Floor.svg')) !!}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" id="swapButton">Swap Room</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    window.onload = function() {
+        const boxes = document.querySelectorAll('svg');
+        boxes.forEach(function(box) {
+            box.style.display = 'block';
+        });
+    };
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const floorMap = {
+            LG: { name: "Lower Ground", file: "1GroundFloor_final.svg" },
+            GF: { name: "Ground Floor", file: "2UpperGroundFloor.svg" },
+            "2F": { name: "Second Floor", file: "3SecondFloor.svg" },
+            "3F": { name: "Third Floor", file: "4ThirdFloor.svg" },
+            "4F": { name: "Fourth Floor", file: "5Fourth Floor.svg" }
+        };
+
+        function loadSvg(floor) {
+            const svgContainer = document.getElementById("svg-container");
+            svgContainer.innerHTML = ""; // Clear previous SVG
+
+            if (floorMap[floor]) {
+                fetch(`/svg/${floorMap[floor].file}`)
+                    .then(response => response.text())
+                    .then(svgContent => {
+                        svgContainer.innerHTML = svgContent; // Insert SVG
+
+                        // Remove 'display: none' from all elements inside the SVG
+                        const svgElement = svgContainer.querySelector("svg");
+                        if (svgElement) {
+                            svgElement.style.display = "block"; // Make the entire SVG visible
+
+                            // Remove 'display: none' from any hidden elements inside the SVG
+                            svgElement.querySelectorAll("[style*='display: none']").forEach(el => {
+                                el.style.display = "block";
+                            });
+                        }
+                    })
+                    .catch(error => console.error("Error loading SVG:", error));
+
+                document.getElementById("floor-title").innerText = floorMap[floor].name;
+            }
+        }
+
+        document.querySelectorAll("ul li a").forEach(button => {
+            button.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                document.querySelectorAll("ul li").forEach(li => li.classList.remove("active"));
+                this.parentElement.classList.add("active");
+
+                const floor = this.getAttribute("data-floor");
+                loadSvg(floor);
+            });
+        });
+
+        
+        document.getElementById("staticBackdrop").addEventListener("shown.bs.modal", function () {
+            loadSvg("LG");
+        });
+        
+    });
+
+    window.onload = function () {
+    document
+        .querySelector('ul li a[data-floor="LG"]')
+        .parentElement.classList.add("active");
+    document.getElementById("floor-title").innerText = "Lower Ground";
+};
+
+</script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const roomId = "{{ $item->room_id }}"; 
+
+    function selectRoomById(roomId) {
+        const rooms = document.querySelectorAll('.room');
+        rooms.forEach((room) => {
+            if (room.id === roomId) {
+              
+                room.classList.add('selected');
+            } else {
+               
+                room.classList.remove('selected');
+            }
+        });
+    }
+    selectRoomById(roomId);
+});
+
+</script>
+<script>
+    function showRoomInfo(roomId) {
+        let swapButton = document.getElementById("swapButton");
+        swapButton.disabled = true;
+        swapButton.innerText = "Fetching...";
+
+        fetch(`/get-room-info/${roomId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    document.getElementById("newRoomId").value = data.room.id;
+                    document.getElementById("newroomdisplay").value = data.room.location  + " (" + data.room.id.substring(5).toUpperCase() + ")";
+                    document.getElementById("newroomname").value = data.room.name;
+                } else {
+                    alert("Room information not found.");
+                }
+            })
+            .catch(error => console.error("Error fetching room info:", error))
+            .finally(() => {
+                // Re-enable the swap button
+                swapButton.disabled = false;
+                swapButton.innerText = "Swap Room";
+            });
+    }
+</script>
 
 
 @endsection

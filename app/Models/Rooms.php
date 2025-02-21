@@ -13,5 +13,9 @@ class Rooms extends Model
         'text_id',
         'room_name',
         'room_desc',
+        'room_head',
+        'room_contact',
+        'room_email',
+        'status',
     ];
 }

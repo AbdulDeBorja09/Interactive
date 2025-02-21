@@ -5,7 +5,7 @@ let startY,
     currentY,
     sheetHeight,
     isDragging = false;
-const minHeight = 150;
+const minHeight = 180;
 const maxHeight = window.innerHeight * 0.65;
 
 function getY(event) {

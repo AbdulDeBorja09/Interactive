@@ -1,5 +1,13 @@
 <section class="floor-title">
-    <h1 id="floor-title"></h1>
+    <h1><span id="floor-title"></span> <a id="toggleBtn"><i id="icon" class="fa-solid fa-chevron-right"></a></i></h1>
+</section>
+<section id="roomlistbox" class="floor-room-list">
+    <div class="div" id="room-list">
+
+    </div>
+    <div class="room-handle">
+        <h1>Offices</h1>
+    </div>
 </section>
 
 <section class="floors">

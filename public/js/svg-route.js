@@ -1,6 +1,4 @@
-// Dijkstra's algorithm for finding the shortest path between two nodes
 function dijkstra(startRoomId, endRoomId, nodesArray) {
-    // Ensure every node in nodesArray has a valid data-room-id.
     nodesArray.forEach((node) => {
         if (
             !node.getAttribute("data-room-id") &&
@@ -158,7 +156,7 @@ function drawRoute() {
     // Extract floor identifiers from the room IDs (e.g., "room-1A")
     let startFloor = startRoomId.match(/(room-..)/)?.[1] || "";
     let endFloor = endRoomId.match(/(room-..)/)?.[1] || "";
-
+    
     // Assuming bottomSheet and minHeight are defined globally…
     bottomSheet.style.height = `${minHeight}px`;
     if (startFloor === endFloor) {
@@ -173,14 +171,8 @@ function clearAllPaths() {
         // Hide paths
         let drawnPaths = svg.querySelectorAll("#route-path");
         drawnPaths.forEach((path) => {
-            path.style.display = "none"; // Hide the path
+            path.style.display = "none";
         });
-
-        // // Hide circles
-        // let drawnCircles = svg.querySelectorAll(".moving-circle");
-        // drawnCircles.forEach((circle) => {
-        //     circle.style.display = "none"; // Hide the circle
-        // });
     });
 }
 
@@ -289,7 +281,6 @@ function navigateBetweenFloors(startFloor, startRoomId, endFloor, endRoomId) {
     }, 5000); // Adjust the delay time based on your animation duration
 }
 
-// Finds the closest stair (by data-name) to the specified room on the given floor
 function findClosestStair(roomId, stairs, svg) {
     let room = svg.querySelector(`.hallway[data-room-id="${roomId}"]`);
     if (!room || stairs.length === 0) {
@@ -302,7 +293,6 @@ function findClosestStair(roomId, stairs, svg) {
         let stairId = stair.getAttribute("data-name");
         if (!stairId) return;
         let distance = calculateDistance(room, stair);
-        // console.log("Stair:", stairId, "Distance:", distance);
         if (distance < minDistance) {
             minDistance = distance;
             closestStair = stairId;
@@ -311,26 +301,19 @@ function findClosestStair(roomId, stairs, svg) {
     return closestStair;
 }
 
-// Draw the computed path on the provided SVG element
-// Helper function to get proper SVG coordinates for a dot element
 function getSVGCoordinates(dot, svg) {
-    // Try to use the element's cx and cy attributes (if they exist)
     let cx = dot.getAttribute("cx");
     let cy = dot.getAttribute("cy");
     if (cx !== null && cy !== null) {
         return { x: parseFloat(cx), y: parseFloat(cy) };
     } else {
-        // If not available, fall back to getBoundingClientRect, then convert to SVG coordinates
         let rect = dot.getBoundingClientRect();
-        // Compute center of the element in client (screen) coordinates
         let clientX = rect.left + rect.width / 2;
         let clientY = rect.top + rect.height / 2;
-
-        // Create an SVGPoint for conversion
         let point = svg.createSVGPoint();
+
         point.x = clientX;
         point.y = clientY;
-        // Use the inverse of the current transformation matrix to convert
         let svgPoint = point.matrixTransform(svg.getScreenCTM().inverse());
         return { x: svgPoint.x, y: svgPoint.y };
     }
@@ -430,7 +413,7 @@ function animateCircle(svg, pathElement) {
         );
         circle.setAttribute("class", "moving-circle");
         circle.setAttribute("r", "1.5");
-        circle.setAttribute("fill", "#da9849");
+        circle.setAttribute("fill", "#f0ad4e");
         svg.appendChild(circle);
     }
 
@@ -441,7 +424,7 @@ function animateCircle(svg, pathElement) {
             "polygon"
         );
         triangle.setAttribute("class", "direction-triangle");
-        triangle.setAttribute("fill", "#da9849");
+        triangle.setAttribute("fill", "#f0ad4e");
         svg.appendChild(triangle);
     }
 
@@ -449,8 +432,8 @@ function animateCircle(svg, pathElement) {
         const size = 1; // Size of the triangle
 
         // Calculate the offset (5px in the direction of movement)
-        const offsetX = Math.cos((angle * Math.PI) / 180) * 3.5;
-        const offsetY = Math.sin((angle * Math.PI) / 180) * 3.5;
+        const offsetX = Math.cos((angle * Math.PI) / 180) * 3;
+        const offsetY = Math.sin((angle * Math.PI) / 180) * 3;
 
         // Adjust the triangle's position to be in front of the circle
         const triangleX = x + offsetX;
@@ -475,6 +458,13 @@ function animateCircle(svg, pathElement) {
     const startTime = performance.now();
 
     function animate(timestamp) {
+        if (!startTime) {
+            // Initialize the start time
+            startTime = timestamp;
+
+            // Recenter the SVG to the center of the container
+        }
+
         const elapsed = timestamp - startTime;
         const distance = Math.min((elapsed / 1000) * speed, pathLength); // Speed in distance per second
         const progress = distance / pathLength;
@@ -508,6 +498,7 @@ function animateCircle(svg, pathElement) {
         }
 
         if (progress < 1) {
+            recenterSVG();
             requestAnimationFrame(animate);
         } else {
             const boundingBox = svg.getBBox();
@@ -520,10 +511,25 @@ function animateCircle(svg, pathElement) {
                 "viewBox",
                 `${contentX} ${contentY} ${contentWidth} ${contentHeight}`
             );
+            // offsetX = 0;
+            // offsetY = 0;
+            // scale = 1;
+            // updateSVGTransform();
+        }
+        function recenterSVG() {
+            const svgElements = document.querySelectorAll("#svg-container svg");
+            let offsetX = 0,
+                offsetY = 0,
+                scale = 1;
+            svgElements.forEach((svg) => {
+                svg.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`;
+            });
         }
     }
 
     requestAnimationFrame(animate);
 }
 
-document.querySelector(".btn").addEventListener("click", drawRoute);
+document
+    .querySelector(".get-direction-btn")
+    .addEventListener("click", drawRoute);
