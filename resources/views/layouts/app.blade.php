@@ -18,7 +18,7 @@
 <body>
     {{-- Screen-loader --}}
     @include('layouts.components.loader')
-
+    <div class="alert-container container" id="custom-alert"><span id="custom-message"></span></div>
     {{-- Navbar with logo --}}
     <nav>
         <div class="container">

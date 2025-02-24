@@ -1085,21 +1085,20 @@ display="none"
        x="94.233566"
        y="49.735428">2F16</tspan></text>
 
-    <circle
+  <!-- <circle
      style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-2f101"
+     id="hallway-2f08"
      class="hallway"
-     data-rooms-id="room-2f10aa"
+     data-room-id="room-2f10a"
      cx="24.761683"
-     cy="43.205132" 
-     r="0.26458332" />
-     
+     cy="43.205132"
+     r="0.26458332" /> -->
        
     <circle
      style="fill:#FFFFFF;stroke-width:1;paint-order:stroke markers fill"
-     id="hallway-2f10"
+     id="hallway-2f10a"
      class="hallway"
-     data-rooms-id="room-2f10a"
+     data-room-id="room-2f10a"
      cx="46.17799"
      cy="21.119108"
      r="0.26458332" />

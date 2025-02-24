@@ -473,7 +473,19 @@ svg {
 .blink-point {
     animation: BlinkPoint 1s infinite;
 }
-
+.alert-container {
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background-color: #217ace;
+    padding: 10px 20px;
+    border-radius: 3px;
+    z-index: 100;
+    transition: opacity ease-in-out 0.5s;
+    display: none;
+    color: white;
+}
 @keyframes BlinkPoint {
     0%,
     100% {

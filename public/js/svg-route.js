@@ -156,7 +156,7 @@ function drawRoute() {
     // Extract floor identifiers from the room IDs (e.g., "room-1A")
     let startFloor = startRoomId.match(/(room-..)/)?.[1] || "";
     let endFloor = endRoomId.match(/(room-..)/)?.[1] || "";
-    
+
     // Assuming bottomSheet and minHeight are defined globally…
     bottomSheet.style.height = `${minHeight}px`;
     if (startFloor === endFloor) {
@@ -272,15 +272,53 @@ function navigateBetweenFloors(startFloor, startRoomId, endFloor, endRoomId) {
     startSVG.style.display = "block";
     endSVG.style.display = "none";
     drawPath(startSVG, pathStart);
-
-    // Delay to simulate animation on the start floor, then switch to end floor
     setTimeout(() => {
-        startSVG.style.display = "none";
-        endSVG.style.display = "block";
-        drawPath(endSVG, pathEnd);
-    }, 5000); // Adjust the delay time based on your animation duration
+        const floorCode = endFloor.slice(5);
+        const floorName = getFloorName(floorCode);
+        showCustomAlert(`Please proceed to ${floorName}`);
+
+        // After showing the alert, delay before switching floors
+        setTimeout(() => {
+            startSVG.style.display = "none";
+            endSVG.style.display = "block";
+            drawPath(endSVG, pathEnd);
+        }, 3000);
+    }, 1000);
 }
 
+function getFloorName(floorCode) {
+    switch (floorCode.toLowerCase()) {
+        case "lf":
+            return "Lower Ground";
+        case "gf":
+            return "Ground Floor";
+        case "2f":
+            return "2nd Floor";
+        case "3f":
+            return "3rd Floor";
+        case "4f":
+            return "4th Floor";
+        default:
+            return floorCode;
+    }
+}
+
+function showCustomAlert(message, duration = 3000, fadeDuration = 500) {
+    const alertBox = document.getElementById("custom-alert");
+    const messageSpan = document.getElementById("custom-message");
+
+    messageSpan.textContent = message;
+    alertBox.style.display = "block";
+    alertBox.style.opacity = 1;
+
+    setTimeout(() => {
+        alertBox.style.opacity = 0;
+        setTimeout(() => {
+            alertBox.style.display = "none";
+            alertBox.style.opacity = 1;
+        }, fadeDuration);
+    }, duration);
+}
 function findClosestStair(roomId, stairs, svg) {
     let room = svg.querySelector(`.hallway[data-room-id="${roomId}"]`);
     if (!room || stairs.length === 0) {
