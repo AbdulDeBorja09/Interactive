@@ -396,7 +396,7 @@ svg {
     cursor: pointer;
 }
 .room:hover {
-    fill: hsl(113, 43%, 44%);
+    fill: #217ace;
 }
 .directions {
     stroke-dasharray: 1000;
