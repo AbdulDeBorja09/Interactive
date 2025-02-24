@@ -15,13 +15,13 @@ class HomeController extends Controller
     }
     public function map()
     {
-        $data = Rooms::all();
+        $data = Rooms::where('status', 1)->get();
         return view('map', compact('data'));
     }
 
     public function showinfo($id)
     {
-        $room = Rooms::where('room_id', $id)->first();
+        $room = Rooms::where('room_id', $id)->where('status', 1)->first();
         return response()->json([
             'success' => $room ? true : false,
             'room' => $room
