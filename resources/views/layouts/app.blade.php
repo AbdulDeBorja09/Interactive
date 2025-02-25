@@ -39,17 +39,21 @@
 
 
     {{-- scripts --}}
+    {{-- scripts --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="{{asset('../js/bottom-drag.js')}}" defer></script>
-    <script src="{{asset('../js/bottom-search.js')}}" defer></script>
-    <script src="{{asset('../js/floors.js')}}" defer></script>
-    <script src="{{asset('../js/svg-route.js')}}" defer></script>
-    <script src="{{asset('../js/svg-zoom.js')}}" defer></script>
-    <script src="{{asset('../js/room-popup-info.js')}}" defer></script>
-    <script src="{{asset('../js/officedrag.js')}}" defer></script>
+    <script src="{{ asset('js/bottom-drag.js') }}?v={{ filemtime(public_path('js/bottom-drag.js')) }}" defer></script>
+    <script src="{{ asset('js/bottom-search.js') }}?v={{ filemtime(public_path('js/bottom-search.js')) }}" defer>
+    </script>
+    <script src="{{ asset('js/floors.js') }}?v={{ filemtime(public_path('js/floors.js')) }}" defer></script>
+    <script src="{{ asset('js/svg-route.js') }}?v={{ filemtime(public_path('js/svg-route.js')) }}" defer></script>
+    <script src="{{ asset('js/svg-zoom.js') }}?v={{ filemtime(public_path('js/svg-zoom.js')) }}" defer></script>
+    <script src="{{ asset('js/room-popup-info.js') }}?v={{ filemtime(public_path('js/room-popup-info.js')) }}" defer>
+    </script>
+    <script src="{{ asset('js/officedrag.js') }}?v={{ filemtime(public_path('js/officedrag.js')) }}" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+
 </body>
 
 </html>

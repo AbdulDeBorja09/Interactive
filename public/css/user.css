@@ -155,6 +155,10 @@ nav img {
 .floor-room-list.open {
     left: 0px;
 }
+.rotate {
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
+}
 .floor-room-list div:first-child {
     min-height: 100px;
     height: 30vh;

@@ -1,10 +1,12 @@
 <section class="floor-title">
-    <h1><span id="floor-title"></span> <a id="toggleBtn"><i id="icon" class="fa-solid fa-chevron-right"></a></i></h1>
+    <a id="dragger">
+        <h1><span id="floor-title"></span> <i id="icon-rotate" class="fa-solid fa-chevron-right"></i></h1>
+    </a>
 </section>
 <section id="roomlistbox" class="floor-room-list">
     <div class="div" id="room-list">
     </div>
-    <div class="room-handle" id="dragger">
+    <div class="room-handle">
         <h1>Offices</h1>
     </div>
 </section>
