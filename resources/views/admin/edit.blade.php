@@ -6,7 +6,7 @@
     <div class="container">
         <ul>
             <li><a href="{{url('/Admin/Dashboard')}}">Home</a></li>
-            <li><a href="{{url('/Admin/Dashboard')}}">Floor List</a></li>
+            <li><a href="{{url('/Admin/Dashboard')}}">Main Menu</a></li>
             <li><a onclick="history.back()">Office List</a></li>
             <li>Edit Office</li>
         </ul>

@@ -5,9 +5,9 @@
     <div class="container">
         <ul>
             <li><a href="{{url('/Admin/Dashboard')}}">Home</a></li>
-            <li>Floor List</li>
+            <li>Main Menu</li>
         </ul>
-        <h1>Floor List</h1>
+        <h1>Dashboard</h1>
     </div>
 </div>
 <section class="main container">
@@ -77,12 +77,12 @@
             </div>
         </div>
         <div class="box">
-            {!! file_get_contents(public_path('image/settings.svg')) !!}
-            <h1>Account Settings</h1>
+            {!! file_get_contents(public_path('image/home_settings.svg')) !!}
+            <h1>General Settings</h1>
             <div class="info">
-                <h1>Account Settings</h1>
+                <h1>General Settings</h1>
                 <h2></h2>
-                <a class="btn" href="{{url('/Profile')}}">View Settings</a>
+                <a class="btn" href="{{url('/Admin/Settings')}}">View Settings</a>
             </div>
         </div>
     </div>

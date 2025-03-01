@@ -157,7 +157,7 @@ nav img {
 }
 .rotate {
     transform: rotate(90deg);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 .floor-room-list div:first-child {
     min-height: 100px;

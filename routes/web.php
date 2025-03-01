@@ -15,7 +15,11 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/Admin/Edit/{id}', [AdminController::class, 'edit'])->name('edit');
     Route::get('/get-room-info/{id}', [AdminController::class, 'getRoomInfo']);
 
-    Route::get('/Profile', [AdminController::class, 'profile'])->name('profile');
+    Route::get('/Admin/Settings', [AdminController::class, 'ShowSettings'])->name('ShowSettings');
+    Route::get('/Admin/Profile', [AdminController::class, 'profile'])->name('profile');
+    Route::get('/Admin/Users', [AdminController::class, 'ShowUsers'])->name('ShowUsers');
+    Route::get('/Admin/Logs', [AdminController::class, 'ShowLogs'])->name('ShowLogs');
+
     Route::get('/All-floors', [AdminController::class, 'allfloors'])->name('allfloors');
     Route::get('/Lower-ground', [AdminController::class, 'lowerGround'])->name('lower-ground');
     Route::get('/Ground-floor', [AdminController::class, 'groundFloor'])->name('ground-floor');

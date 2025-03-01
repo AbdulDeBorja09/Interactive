@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Logs;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -72,6 +73,23 @@ class AdminController extends Controller
             'fourthFloorCount',
         ));
     }
+    public function ShowSettings()
+    {
+        return view('admin.settings');
+    }
+
+    public function ShowUsers()
+    {
+        $user = User::all();
+        return view('admin.users', compact('user'));
+    }
+
+    public function ShowLogs()
+    {
+        $logs = Logs::orderBy('created_at', 'desc')->get();
+        return view('admin.logs', compact('logs'));
+    }
+
     public function profile()
     {
 
@@ -84,6 +102,7 @@ class AdminController extends Controller
             'name' => 'required|string|max:255',
             'password' => 'required|min:8',
             'cpassword' => 'required|same:password',
+            'old_password' =>  'required|min:8',
         ], [
             'name.required' => 'The name field is required.',
             'name.string' => 'The name must be a valid string.',
@@ -97,10 +116,14 @@ class AdminController extends Controller
         ]);
 
         try {
-            User::where('id', Auth::user()->id)->update([
-                'name' => $request->name,
-                'password' => Hash::make($request->password),
-            ]);
+            if (!Hash::check($request->old_password, Auth::user()->password)) {
+                return redirect()->back()->with('error', 'Old Password Does Not Match!');
+            } else {
+                User::where('id', Auth::user()->id)->update([
+                    'name' => $request->name,
+                    'password' => Hash::make($request->password),
+                ]);
+            }
             return redirect()->back()->with('success', 'Profile updated successfully!');
         } catch (\Exception $e) {
             return redirect()->back()->with('error', 'Failed to update profile');
@@ -114,27 +137,6 @@ class AdminController extends Controller
         return view('admin.edit', compact('item'));
     }
 
-    public function submitedit(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'desc' => 'required|string|max:255',
-        ]);
-
-        try {
-            Rooms::where('id', $request->id)->update([
-                'room_name' => $request->name,
-                'room_desc' => $request->desc,
-                'room_head' => $request->head,
-                'room_contact' => $request->contact,
-                'room_email' => $request->email,
-                'status' => $request->status,
-            ]);
-            return redirect()->back()->with('success', 'Room updated successfully!');
-        } catch (\Exception $e) {
-            return redirect()->back()->with('error', 'Failed to update room');
-        }
-    }
 
     public function enable(Request $request)
     {
@@ -178,6 +180,58 @@ class AdminController extends Controller
             ]
         ]);
     }
+    public function submitedit(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'desc' => 'required|string|max:255',
+        ]);
+
+        try {
+            $room = Rooms::find($request->id);
+            if (!$room) {
+                return redirect()->back()->with('error', 'Room not found');
+            }
+
+            $oldData = $room->toArray();
+            $newData = [
+                'room_name' => $request->name,
+                'room_desc' => $request->desc,
+                'room_head' => $request->head,
+                'room_contact' => $request->contact,
+                'room_email' => $request->email,
+                'status' => $request->status,
+            ];
+
+            $changedData = [];
+            $oldChangedData = [];
+            foreach ($newData as $key => $value) {
+                if ($oldData[$key] != $value) {
+                    $changedData[$key] = $value;
+                    $oldChangedData[$key] = $oldData[$key];
+                }
+            }
+
+            if (!empty($changedData)) {
+                Logs::create([
+                    'name' => Auth::user()->name,
+                    'room_id' => $room->room_id,
+                    'action' => 'update',
+                    'old_data' => $oldChangedData,
+                    'new_data' => $changedData,
+                ]);
+            }
+
+            $room->update($newData);
+
+            return redirect()->back()->with('success', 'Room updated successfully!');
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Failed to update room');
+        }
+    }
+
+
+
     public function swapRooms(Request $request)
     {
         $request->validate([
@@ -191,8 +245,9 @@ class AdminController extends Controller
         if (!$oldRoom || !$newRoom) {
             return redirect()->back()->with('error', 'Room to not found');
         }
+        $oldDataOldRoom = $oldRoom->toArray();
+        $oldDataNewRoom = $newRoom->toArray();
 
-        // Swap room details
         $temp = [
             'room_name' => $oldRoom->room_name,
             'room_desc' => $oldRoom->room_desc,
@@ -214,6 +269,22 @@ class AdminController extends Controller
         $newRoom->update($temp);
 
         if ($oldRoom && $newRoom) {
+            Logs::create([
+                'room_id' => $oldRoom->room_id,
+                'action' => 'swap',
+                'old_data' => $oldDataOldRoom,
+                'new_data' => $oldRoom->toArray(),
+                'name' => Auth::user()->name,
+            ]);
+
+            Logs::create([
+                'room_id' => $newRoom->room_id,
+                'action' => 'swap',
+                'old_data' => $oldDataNewRoom,
+                'new_data' => $newRoom->toArray(),
+                'name' => Auth::user()->name,
+            ]);
+
             return redirect()->back()->with('success', 'Rooms swapped successfully');
         } else {
             return redirect()->back()->with('error', 'Failed to swap room');
