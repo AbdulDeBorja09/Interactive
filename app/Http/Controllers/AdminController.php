@@ -290,4 +290,22 @@ class AdminController extends Controller
             return redirect()->back()->with('error', 'Failed to swap room');
         }
     }
+
+    public function CreateAdminAccount(Request $request)
+    {
+        try {
+            if ($request->password === $request->cpassword) {
+                $user = User::create([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'password' => Hash::make($request->password),
+                ]);
+                return redirect()->back()->with('success', 'Account Added successfully!');
+            } else {
+                return redirect()->back()->with('error', 'Password must be same.');
+            }
+        } catch (\Exception $e) {
+            return redirect()->back()->with('error', 'Failed to addd account');
+        }
+    }
 }

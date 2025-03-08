@@ -32,4 +32,8 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/Admin/Enable', [AdminController::class, 'enable'])->name('enable');
     Route::post('/Admin/Disable', [AdminController::class, 'disable'])->name('disable');
     Route::post('/Admin/Room/Swaps', [AdminController::class, 'swapRooms'])->name('swapRooms');
+    Route::post('/Admin/Account/New', [AdminController::class, 'CreateAdminAccount'])->name('CreateAdminAccount');
+
+
+    
 });

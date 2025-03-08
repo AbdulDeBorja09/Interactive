@@ -14,15 +14,6 @@
 <section class="main container">
     <div class="grid-container">
         <div class="box">
-            {!! file_get_contents(public_path('image/Faqs.svg')) !!}
-            <h1>All Faqs</h1>
-            <div class="info">
-                <h1>Faqs Settings</h1>
-                <h2></h2>
-                <a class="btn" href="{{url('/')}}">View Faqs</a>
-            </div>
-        </div>
-        <div class="box">
             {!! file_get_contents(public_path('image/logs.svg')) !!}
             <h1>All Logs</h1>
             <div class="info">

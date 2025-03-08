@@ -235,7 +235,6 @@ main {
 .modal-body {
     background-color: ghostwhite;
     background-image: url(../image/bodydesign.jpg);
-    min-height: 70vh;
 }
 .modal-body #svg-container {
     display: flex;
@@ -261,16 +260,17 @@ textarea {
 .room:hover {
     background-color: #0071ff;
 }
-.floors {
-    position: fixed;
-    bottom: 200px;
-}
 
+.floors ul {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
 .floors ul li {
     width: 30px;
     height: 30px;
     text-align: center;
-    margin-top: 10px;
+    margin-right: 10px;
     border-radius: 4px;
     border: 1px solid rgb(87, 87, 87);
     padding-top: 1px;
