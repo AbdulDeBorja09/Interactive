@@ -102,8 +102,7 @@ nav p {
 }
 
 #loader .loader-bottom .nu-logo {
-    height: 35px;
-    width: max-content;
+    width: 30px;
     margin: auto;
 }
 #loader .loader-bottom .text {
