@@ -42,7 +42,7 @@
     @include('layouts.components.floatings')
     @include('layouts.components.bottom')
     @include('layouts.components.popup')
-
+    @include('layouts.components.guide')
 
 
     {{-- scripts --}}

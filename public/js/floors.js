@@ -64,7 +64,7 @@ document.querySelectorAll("ul li a").forEach((button) => {
     });
 });
 
-// On page load, display Lower Ground by default
+
 window.onload = function () {
     document.getElementById("LG").style.display = "block";
     document
@@ -72,7 +72,6 @@ window.onload = function () {
         .parentElement.classList.add("active");
     document.getElementById("floor-title").innerText = "Lower Ground";
 
-    // Fetch and display rooms for default floor
     fetch("/GetRooms", {
         method: "POST",
         headers: {
@@ -93,7 +92,7 @@ window.onload = function () {
                     const roomItem = document.createElement("p");
                     roomItem.classList.add("room-item");
                     roomItem.innerText = room.room_name;
-                    roomItem.dataset.BlinkID = room.room_id; // Store room_id in dataset
+                    roomItem.dataset.BlinkID = room.room_id;
                     roomItem.addEventListener("click", function () {
                         BlinkRoom(this.dataset.BlinkID);
                     });

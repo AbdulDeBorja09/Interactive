@@ -54,7 +54,6 @@ main {
     min-height: 100vh;
 }
 .breadcrumbs {
-    margin-top: 79px;
     background-color: white;
     box-shadow: rgb(50 50 93 / 0.25) 0 6px 12px -2px,
         rgb(0 0 0 / 0.3) 0 3px 7px -3px;
@@ -195,7 +194,7 @@ main {
     justify-content: space-around;
 }
 .table i {
-    color: #217ace; 
+    color: #217ace;
 }
 .back-btn {
     text-decoration: none;
@@ -415,6 +414,34 @@ textarea {
 
 #loader .dots-loader span:nth-child(3) {
     animation-delay: 0.4s;
+}
+
+#loader .loader-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+#loader .loader-bottom .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#loader .loader-bottom .nu-logo {
+    height: 35px;
+    width: max-content;
+    margin: auto;
+}
+#loader .loader-bottom .text {
+    margin-top: 2px;
+}
+#loader .loader-bottom p {
+    margin: 0px 5px;
+    font-size: 10px;
+    color: white;
+    font-weight: 500;
 }
 
 @media screen and (max-width: 500px) {

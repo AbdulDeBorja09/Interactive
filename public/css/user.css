@@ -116,7 +116,6 @@ nav p {
     font-weight: 500;
 }
 
-/* Individual Dots */
 #loader .dots-loader span {
     width: 10px;
     height: 10px;
@@ -125,7 +124,6 @@ nav p {
     animation: bounce 1.4s infinite ease-in-out both;
 }
 
-/* Delay each dot */
 #loader .dots-loader span:nth-child(1) {
     animation-delay: 0s;
 }
@@ -137,9 +135,51 @@ nav p {
 #loader .dots-loader span:nth-child(3) {
     animation-delay: 0.4s;
 }
+.guide-toggler {
+    position: fixed;
+    bottom: 205px;
+    right: 32px;
+    color: white;
+    background: linear-gradient(90deg, #32a8ff 0%, #0071ff 100%);
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.2);
+}
+.guide-toggler:active {
+    transform: scale(0.9);
+}
+.guide-toggler i {
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
+    border: 0;
+}
+.reset-button {
+    position: fixed;
+    background-color: white;
+    top: 100px;
+    right: 28px;
+    width: 45px;
+    height: 45px;
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: 4px;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.2);
+    border: 1px solid #080c52;
+    color: #080c52;
+}
+.reset-button:active {
+    transform: scale(0.9);
+}
+
 .floor-title {
     position: fixed;
-    top: 100px;
+    top: 110px;
     font-size: 12px;
     padding: 3px 20px 3px 20px;
     border-top-right-radius: 7px;
@@ -154,9 +194,13 @@ nav p {
     padding: 0;
     margin: 0;
 }
+.floor-title span {
+    margin: 0px 5px 0px 5px;
+}
 .floors {
     position: fixed;
     bottom: 200px;
+    z-index: 100;
 }
 
 .floors ul li {
@@ -193,7 +237,8 @@ nav p {
     height: 30vh;
     top: 150px;
     left: -35rem;
-    min-height: 100px;
+    z-index: 1000;
+    min-height: 400;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.2);
@@ -267,6 +312,7 @@ nav p {
     border-top-right-radius: 10px;
     transition: height 0.3s ease;
     overflow: hidden;
+    z-index: 1000;
 }
 .header {
     display: flex;
@@ -420,7 +466,10 @@ nav p {
     touch-action: manipulation;
     white-space: nowrap;
 }
-
+.get-direction-btn:active {
+    box-shadow: none;
+    transform: scale(0.99);
+}
 #svg-container {
     width: 100vw;
     height: 100vh;
@@ -527,8 +576,8 @@ svg {
 .alert-container {
     position: fixed;
     top: 100px;
-    left: 0;
-    right: 0;
+    left: 20px;
+    right: 20px;
     background-color: #217ace;
     padding: 10px 20px;
     border-radius: 3px;
