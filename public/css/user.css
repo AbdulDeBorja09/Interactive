@@ -20,14 +20,33 @@ nav {
     background: #020024;
     background: linear-gradient(90deg, #020024 0%, #090979 0%, #00d4ff 100%);
     background: linear-gradient(90deg, #030024 0%, #152ac1 37%, #139bff 100%);
-    padding: 10px;
+    padding: 12px;
     z-index: 1000;
     position: absolute;
     top: 0;
     width: 100vw;
 }
-nav img {
+nav .logo {
     height: 50px;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nu-logo {
+    height: 30px;
+    margin-top: 10px;
+}
+nav .text {
+    margin-top: 11px;
+}
+nav p {
+    margin: 0px 5px;
+    font-size: 9px;
+    color: white;
+    font-weight: 500;
 }
 
 #loader {
@@ -67,6 +86,34 @@ nav img {
     line-height: 1.5;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+#loader .loader-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+}
+#loader .loader-bottom .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#loader .loader-bottom .nu-logo {
+    height: 35px;
+    width: max-content;
+    margin: auto;
+}
+#loader .loader-bottom .text {
+    margin-top: 2px;
+}
+#loader .loader-bottom p {
+    margin: 0px 5px;
+    font-size: 10px;
+    color: white;
+    font-weight: 500;
 }
 
 /* Individual Dots */
@@ -533,7 +580,7 @@ svg {
         width: 85vw;
     }
     .floor-room-list {
-        left: -90vw;
+        left: -88vw;
     }
 }
 @keyframes draw {

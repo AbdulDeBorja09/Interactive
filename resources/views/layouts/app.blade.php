@@ -22,7 +22,14 @@
     {{-- Navbar with logo --}}
     <nav>
         <div class="container">
-            <img src="{{asset('/image/Navlogo.png')}}" loading="lazy" alt="NavLogo" />
+            <img class="logo" src="{{asset('/image/Navlogo.png')}}" loading="lazy" alt="NavLogo" />
+            <div class="d-flex">
+                <img class="nu-logo" src="{{asset('/image/NULogo.png')}}" alt="">
+                <div class="text">
+                    <p>Powered By</p>
+                    <p>NU Laguna</p>
+                </div>
+            </div>
         </div>
     </nav>
 

@@ -7,6 +7,15 @@
         <span></span>
     </div>
     <p>Loading...</p>
+    <div class="loader-bottom ">
+        <div class="d-flex">
+            <img class="nu-logo" src="{{asset('/image/NULogo.png')}}" alt="">
+            <div class="text">
+                <p>Powered By</p>
+                <p>NU Laguna</p>
+            </div>
+        </div>
+    </div>
 </div>
 <script>
     window.addEventListener("load", function() {
