@@ -7,7 +7,7 @@
         transform: translate(-50%, -50%);
         width: 80vw;
         padding: 15px;
-        height: max-content;
+        height: auto;
         background: #217ace;
         border-radius: 25px;
         box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.2);
