@@ -26,7 +26,7 @@
 </section>
 
 
-<button class="guide-toggler"><i class=" fa-solid fa-question"></i></button>
+
 <script>
     document.getElementById("clearBtn").addEventListener("click", function() {
         document.getElementById("end-hidden").value = "";

@@ -1,95 +1,11 @@
-<style>
-    .modal {
-        display: block;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80vw;
-        padding: 15px;
-        height: auto;
-        background: #217ace;
-        border-radius: 25px;
-        box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        color: white;
-    }
-
-    .modal .content {
-        background: #217ace;
-        margin: 0;
-        padding: 0;
-        margin-top: 5px;
-        padding-bottom: 7px;
-    }
-
-    .modal.active {
-        display: block;
-    }
-
-    .modal h3 {
-        font-size: 17px;
-        font-weight: 600;
-    }
-
-    .modal p {
-        text-align: start;
-        font-size: 12px;
-        font-weight: 400;
-    }
-
-    .modal .buttons {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 10px;
-        padding: 0px 10px
-    }
-
-    .modal .content button {
-        background-color: white;
-        color: #217ace;
-        border-radius: 8px;
-        padding: 5px 10px;
-        border: 1px solid white;
-        font-size: 14px;
-        font-weight: 700;
-    }
-
-    .modal img {
-        width: 100%;
-        height: 100%;
-        margin-bottom: 10px;
-    }
-
-    .exit-btn {
-        margin: 0;
-        padding: 0;
-        margin-top: -5px;
-        text-align: end;
-        color: black;
-        margin-right: 5px;
-    }
-
-    .exit-btn button {
-        margin: 0;
-        padding: 0;
-        margin-right: 5px;
-
-    }
-
-    .exit-btn button i {
-        font-size: 10px
-    }
-</style>
-
-
-
-
-<section onload="checkModalDisplay()">
+<button class="guide-toggler" onclick="showModal()"><i class=" fa-solid fa-question"></i></button>
+<section class="guides" onload="checkModalDisplay()">
     <!-- Guide Modal -->
     <div id="guide-modal" class="modal">
         <div class="exit-btn">
-            <i class="fa-solid fa-circle-xmark"></i>
+            <a href="javascript:void(0);" onclick="closeModal()" style="color: black">
+                <i class="fa-solid fa-circle-xmark"></i>
+            </a>
         </div>
         <div class="content">
             <div id="landing-content">
@@ -112,12 +28,12 @@
             </div>
 
             <div id="guide-content" style="display: none;">
-                <img id="modal-image" src="{{ asset('images/step1.jpg') }}" alt="Step 1">
-                <h3 id="modal-title">Guide</h3>
-                <p id="modal-content">Step 1: Welcome to the guide!</p>
+                <img id="modal-image" src="" alt="Step 1">
+                <h3 id="modal-title"></h3>
+                <p id="modal-content"></p>
                 <div class="buttons">
-                    <button id="prev-btn" onclick="changeStep(-1)" disabled>Previous</button>
-                    <button id="next-btn" onclick="changeStep(1)">Next</button>
+                    <button id="prev-btn" onclick="changeSteps(-1)" disabled>Previous</button>
+                    <button id="next-btn" onclick="changeSteps(1)">Next</button>
                 </div>
             </div>
         </div>
@@ -137,7 +53,8 @@
         { title: { en: "Follow the Path: Directions Displayed", tl: "Sundan ang Daan: Ipinapakita ang Direksyon" }, en: "Once you've entered your starting point and destination, the map will display the quickest route. Follow the highlighted path to reach your desired office within City Hall.", tl: "Ilagay ang panimulang punto at destinasyon upang makita ang pinakamabilis na ruta. Sundan ang naka-highlight na daan patungo sa opisina.", img: "{{ asset('image/guide/step7.png') }}" },  
         { title: { en: "That’s all thank you", tl: "Iyon lamang po, salamat!" }, en: "Congratulations! You've completed the tutorial. Now go explore and discover all that Calamba City Hall has to offer.", tl: "Congratulations! Natapos mo na ang tutorial. Ngayon, mag-explore at tuklasin ang lahat ng iniaalok ng Calamba City Hall.", img: "{{ asset('image/guide/step8.png') }}" },            
     ];
-    
+   
+        
     function checkModalDisplay() {
         let lastVisit = localStorage.getItem("lastVisit");
         let now = new Date().getTime();
@@ -151,11 +68,19 @@
     
     function showModal() {
         document.getElementById("guide-modal").classList.add("active");
+        goToLanding();
+    }
+    
+    function closeModal() {
+        document.getElementById("guide-modal").classList.remove("active");
+        goToLanding();
     }
     
     function goToLanding() {
         document.getElementById("language-selection").style.display = "none";
+        document.getElementById("guide-content").style.display = "none";
         document.getElementById("landing-content").style.display = "block";
+        step = 0;
     }
     
     function goToLanguageSelection() {
@@ -167,10 +92,11 @@
         selectedLanguage = language;
         document.getElementById("language-selection").style.display = "none";
         document.getElementById("guide-content").style.display = "block";
-        updateContent();
+        step = 0;
+        updateModalContent();
     }
     
-    function updateContent() {
+    function updateModalContent() {
         document.getElementById("modal-title").innerText = steps[step].title[selectedLanguage];
         document.getElementById("modal-content").innerText = steps[step][selectedLanguage];
         document.getElementById("modal-image").src = steps[step].img;
@@ -178,18 +104,16 @@
         document.getElementById("next-btn").innerText = step === steps.length - 1 ? "Close" : "Next";
     }
     
-    function changeStep(direction) {
+    function changeSteps(direction) {
         step += direction;
         if (step < 0) {
-            document.getElementById("guide-content").style.display = "none";
-            document.getElementById("language-selection").style.display = "block";
-            step = 0;
+            goToLanguageSelection();
             return;
         }
         if (step >= steps.length) {
-            document.getElementById("guide-modal").classList.remove("active");
+            closeModal();
             return;
         }
-        updateContent();
+        updateModalContent();
     }
 </script>
